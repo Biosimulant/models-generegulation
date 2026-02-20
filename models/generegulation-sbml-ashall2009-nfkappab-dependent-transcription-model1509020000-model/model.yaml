@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1509020000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1509020000?filename=MODEL1509020000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ashall2009_nfkappab_dependent_transcription_model1509020000_model:Ashall2009NfkappabDependentTranscriptionModel1509020000Model
   init_kwargs:
     model_path: data/MODEL1509020000.xml

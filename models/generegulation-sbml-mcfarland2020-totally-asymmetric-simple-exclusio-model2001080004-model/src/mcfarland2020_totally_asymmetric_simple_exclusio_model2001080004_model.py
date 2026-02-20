@@ -12,13 +12,13 @@ from pathlib import Path
 from typing import Any, Dict, Optional, Set, TYPE_CHECKING
 
 if TYPE_CHECKING:  # pragma: no cover - typing only
-    from bsim import BioWorld
+    from biosim import BioWorld
 
-import bsim
-from bsim.signals import BioSignal, SignalMetadata
+import biosim
+from biosim.signals import BioSignal, SignalMetadata
 
 
-class SbmlMcfarland2020TotallyAsymmetricSimpleExclusionProcess(bsim.BioModule):
+class SbmlMcfarland2020TotallyAsymmetricSimpleExclusionProcess(biosim.BioModule):
     """BioModule wrapper for SBML model: McFarland2020 - Totally Asymmetric Simple Exclusion Process (TASEP) model describing the movement of particles (ribosomes) along a lattice (the mRNA)."""
 
     def __init__(self, model_path: str = "data/MODEL2001080004.xml", min_dt: float = 0.01) -> None:

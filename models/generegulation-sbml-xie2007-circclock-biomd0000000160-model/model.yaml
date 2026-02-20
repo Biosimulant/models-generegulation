@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000160
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000160?filename=BIOMD0000000160_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.xie2007_circclock_biomd0000000160_model:Xie2007CircclockBiomd0000000160Model
   init_kwargs:
     model_path: data/BIOMD0000000160.xml

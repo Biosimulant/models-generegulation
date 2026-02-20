@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1510230003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1510230003?filename=MODEL1510230003_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rantasalo2016_synthetic_expresion_modulator_cons_model1510230003_model:Rantasalo2016SyntheticExpresionModulatorConsModel1510230003Model
   init_kwargs:
     model_path: data/MODEL1510230003.xml

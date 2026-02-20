@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000887
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000887?filename=Lim2014.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lim2014_htlv_i_infection_a_dynamic_struggle_betw_biomd0000000887_model:Lim2014HtlvIInfectionADynamicStruggleBetwBiomd0000000887Model
   init_kwargs:
     model_path: data/BIOMD0000000887.xml

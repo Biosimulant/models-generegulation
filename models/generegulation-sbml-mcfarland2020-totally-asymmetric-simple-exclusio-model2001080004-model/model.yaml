@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001080004?filename=GTM
     code_v2.zip
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mcfarland2020_totally_asymmetric_simple_exclusio_model2001080004_model:Mcfarland2020TotallyAsymmetricSimpleExclusioModel2001080004Model
   init_kwargs:
     model_path: data/MODEL2001080004.xml

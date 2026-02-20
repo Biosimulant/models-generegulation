@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2004300002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2004300002?filename=Konrath2020_p53_subpopulation_a_l2v4.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.konrath2020_p53_signaling_model_model2004300002_model:Konrath2020P53SignalingModelModel2004300002Model
   init_kwargs:
     model_path: data/MODEL2004300002.xml

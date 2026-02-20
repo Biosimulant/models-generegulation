@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1504170002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1504170002?filename=MODEL1504170002_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.azpeitia2010_gene_regulatory_network_to_maintain_model1504170002_model:Azpeitia2010GeneRegulatoryNetworkToMaintainModel1504170002Model
   init_kwargs:
     model_path: data/MODEL1504170002.xml

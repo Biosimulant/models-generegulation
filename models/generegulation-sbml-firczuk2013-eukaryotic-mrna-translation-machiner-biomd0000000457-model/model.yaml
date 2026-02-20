@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000457
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000457?filename=BIOMD0000000457_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.firczuk2013_eukaryotic_mrna_translation_machiner_biomd0000000457_model:Firczuk2013EukaryoticMrnaTranslationMachinerBiomd0000000457Model
   init_kwargs:
     model_path: data/BIOMD0000000457.xml

@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1403120000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1403120000?filename=MODEL1403120000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.grunwald2008_gene_regulation_of_the_duchenne_mus_model1403120000_model:Grunwald2008GeneRegulationOfTheDuchenneMusModel1403120000Model
   init_kwargs:
     model_path: data/MODEL1403120000.xml

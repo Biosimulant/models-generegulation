@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000459
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000459?filename=BIOMD0000000459_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.liebal2012_b_subtilis_post_transcriptional_insta_biomd0000000459_model:Liebal2012BSubtilisPostTranscriptionalInstaBiomd0000000459Model
   init_kwargs:
     model_path: data/BIOMD0000000459.xml

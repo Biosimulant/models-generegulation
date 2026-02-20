@@ -21,7 +21,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109080001?filename=IL-12
     regulating IL-10 final.sbml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.khandibharad2022_il12_regulating_il10_expression_model2109080001_model:Khandibharad2022Il12RegulatingIl10ExpressionModel2109080001Model
   init_kwargs:
     model_path: data/MODEL2109080001.sbml

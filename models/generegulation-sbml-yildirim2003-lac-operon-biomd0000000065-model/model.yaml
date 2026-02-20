@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000065
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000065?filename=BIOMD0000000065_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yildirim2003_lac_operon_biomd0000000065_model:Yildirim2003LacOperonBiomd0000000065Model
   init_kwargs:
     model_path: data/BIOMD0000000065.xml

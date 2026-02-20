@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000461
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000461?filename=BIOMD0000000461_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.liebal2012_b_subtilis_transcription_inhibition_m_biomd0000000461_model:Liebal2012BSubtilisTranscriptionInhibitionMBiomd0000000461Model
   init_kwargs:
     model_path: data/BIOMD0000000461.xml

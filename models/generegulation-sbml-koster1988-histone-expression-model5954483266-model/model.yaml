@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL5954483266
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL5954483266?filename=MODEL5954483266_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.koster1988_histone_expression_model5954483266_model:Koster1988HistoneExpressionModel5954483266Model
   init_kwargs:
     model_path: data/MODEL5954483266.xml

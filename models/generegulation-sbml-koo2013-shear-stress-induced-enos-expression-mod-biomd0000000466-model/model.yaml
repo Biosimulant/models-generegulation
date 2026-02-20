@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000466
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000466?filename=BIOMD0000000466_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.koo2013_shear_stress_induced_enos_expression_mod_biomd0000000466_model:Koo2013ShearStressInducedEnosExpressionModBiomd0000000466Model
   init_kwargs:
     model_path: data/BIOMD0000000466.xml

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1008110000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1008110000?filename=MODEL1008110000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.werner2005_ikappab_kinase_model1008110000_model:Werner2005IkappabKinaseModel1008110000Model
   init_kwargs:
     model_path: data/MODEL1008110000.xml

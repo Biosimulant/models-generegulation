@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000460
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000460?filename=BIOMD0000000460_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.liebal2012_b_subtilis_sigb_proteolysis_model_biomd0000000460_model:Liebal2012BSubtilisSigbProteolysisModelBiomd0000000460Model
   init_kwargs:
     model_path: data/BIOMD0000000460.xml

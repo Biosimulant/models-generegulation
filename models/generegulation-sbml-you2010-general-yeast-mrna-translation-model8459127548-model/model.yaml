@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL8459127548
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL8459127548?filename=MODEL8459127548_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.you2010_general_yeast_mrna_translation_model8459127548_model:You2010GeneralYeastMrnaTranslationModel8459127548Model
   init_kwargs:
     model_path: data/MODEL8459127548.xml

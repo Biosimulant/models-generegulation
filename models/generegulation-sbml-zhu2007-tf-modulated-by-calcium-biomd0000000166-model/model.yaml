@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000166
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000166?filename=BIOMD0000000166_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zhu2007_tf_modulated_by_calcium_biomd0000000166_model:Zhu2007TfModulatedByCalciumBiomd0000000166Model
   init_kwargs:
     model_path: data/BIOMD0000000166.xml

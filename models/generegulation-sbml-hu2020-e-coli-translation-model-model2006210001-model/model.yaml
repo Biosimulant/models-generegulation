@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2006210001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2006210001?filename=Data-S1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hu2020_e_coli_translation_model_model2006210001_model:Hu2020EColiTranslationModelModel2006210001Model
   init_kwargs:
     model_path: data/MODEL2006210001.xml

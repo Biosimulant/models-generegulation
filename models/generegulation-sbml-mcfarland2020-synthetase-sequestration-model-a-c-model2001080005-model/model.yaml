@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2001080005
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001080005?filename=Synthetase_sequestration_Model.zip
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mcfarland2020_synthetase_sequestration_model_a_c_model2001080005_model:Mcfarland2020SynthetaseSequestrationModelACModel2001080005Model
   init_kwargs:
     model_path: data/MODEL2001080005.xml

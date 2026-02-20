@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000316
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000316?filename=BIOMD0000000316_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.shen_orr2002_feedforward_and_gate_biomd0000000316_model:ShenOrr2002FeedforwardAndGateBiomd0000000316Model
   init_kwargs:
     model_path: data/BIOMD0000000316.xml

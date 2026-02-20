@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000139
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000139?filename=BIOMD0000000139_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hoffmann2002_knockout_ikbnfkb_signaling_biomd0000000139_model:Hoffmann2002KnockoutIkbnfkbSignalingBiomd0000000139Model
   init_kwargs:
     model_path: data/BIOMD0000000139.xml

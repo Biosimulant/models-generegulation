@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000841
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000841?filename=Dhawan2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dhawan2019_endogenous_mirna_sponges_mediate_the_biomd0000000841_model:Dhawan2019EndogenousMirnaSpongesMediateTheBiomd0000000841Model
   init_kwargs:
     model_path: data/BIOMD0000000841.xml

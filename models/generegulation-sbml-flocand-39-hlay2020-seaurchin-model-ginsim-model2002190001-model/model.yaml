@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2002190001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2002190001?filename=SeaUrchin_model_ginsim.sbml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.flocand_39_hlay2020_seaurchin_model_ginsim_model2002190001_model:Flocand39Hlay2020SeaurchinModelGinsimModel2002190001Model
   init_kwargs:
     model_path: data/MODEL2002190001.sbml
