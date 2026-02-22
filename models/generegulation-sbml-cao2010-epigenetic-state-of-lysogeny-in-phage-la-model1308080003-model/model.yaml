@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Cao2010EpigeneticStateOfLysogenyInPhageLaModel1308080003Model'
-description: 'References:1. Xiaomei Zhu, Lan Yin, Leroy Hood, David Galas and Ping
-  Ao, Efficiency, Robustness and Stochasticity of Gene Regulatory networks in Systems
-  biology: Lambda switch as a working example, 20'
+description: "References:1. It can be used to explore generegulation cao2010 epigenetic state of lysogeny dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

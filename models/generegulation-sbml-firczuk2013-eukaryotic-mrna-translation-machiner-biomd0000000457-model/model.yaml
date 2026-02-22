@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Firczuk2013EukaryoticMrnaTranslationMachinerBiomd0000000457Model'
-description: Firczuk2013 - Eukaryotic mRNA translation machinery This is a model of
-  Saccharomyces cerevisiae mRNA translation which includes the initiation, elongation
-  and termination phases. The model is for 20 c
+description: "Firczuk2013 - Eukaryotic mRNA translation machinery This is a model of Saccharomyces cerevisiae mRNA translation which includes the initiation, elongation and termination phases. It can be used to explore generegulation firczuk2013 eukaryotic mrna translation machiner dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

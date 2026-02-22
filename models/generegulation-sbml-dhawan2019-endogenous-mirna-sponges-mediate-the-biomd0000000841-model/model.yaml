@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Dhawan2019EndogenousMirnaSpongesMediateTheBiomd0000000841Model'
-description: This is a delay differential equation model showing how non-coding RNA,
-  acting as microRNA (miRNA) sponges in a conserved RNA-transcription factor feedback
-  motif, can five rise to oscillatory behaviou
+description: "This is a delay differential equation model showing how non-coding RNA, acting as microRNA (miRNA) sponges in a conserved RNA-transcription factor feedback motif, can five rise to oscillatory behaviou. It can be used to explore generegulation dhawan2019 endogenous mirna sponges mediate dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

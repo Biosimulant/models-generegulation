@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Konrath2020P53SignalingModelModel2004300002Model'
-description: The ODE model is based on Batchelor et al., Mol. Syst. Biol. 7 (2011)
-  and was extended by introducing explicit descriptions of the transcription and translation
-  processes of Mdm2 mRNA and Wip1 mRNA. T
+description: "The ODE model is based on Batchelor et al., Mol. It can be used to explore generegulation konrath2020 p53 signaling model2004300002 dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

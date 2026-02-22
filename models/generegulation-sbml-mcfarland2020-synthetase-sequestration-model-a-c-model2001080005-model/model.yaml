@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Mcfarland2020SynthetaseSequestrationModelACModel2001080005Model'
-description: 'The Synthetase Sequestration Model (SSM) is a simplified translation
-  model that considers explicitly two main steps in the process of tRNA aminoacylation:
-  first, the tRNA is bound by the aminoacyl tRN'
+description: "The Synthetase Sequestration Model (SSM) is a simplified translation model that considers explicitly two main steps in the process of tRNA aminoacylation: first, the tRNA is bound by the aminoacyl tRN. It can be used to explore generegulation mcfarland2020 synthetase sequestration a c dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

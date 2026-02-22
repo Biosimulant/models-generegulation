@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Azpeitia2010GeneRegulatoryNetworkToMaintainModel1504170000Model'
-description: Faithful wrapper of upstream SBML model.
+description: "Gene Regulation Azpeitia2010Gene Regulatory Network To Maintain Model1504170000Model captures core biological behavior in the context of generegulation, sbml, biomodels_ebi using a biomodels_ebi-sourced OTHER m. When you run it, you can observe state and evaluate how the modeled system changes across runs."
 standard: other
 tags:
 - generegulation

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Hat2016ReponseOfP53SystemToIrradiationInBiomd0000000943Model'
-description: The p53 transcription factor is a regulator of key cellular processes
-  including DNA repair, cell cycle arrest, and apoptosis. In this theoretical study,
-  we investigate how the complex circuitry of the
+description: "The p53 transcription factor is a regulator of key cellular processes including DNA repair, cell cycle arrest, and apoptosis. In this theoretical study, we investigate how the complex circuitry of the."
 standard: other
 tags:
 - generegulation

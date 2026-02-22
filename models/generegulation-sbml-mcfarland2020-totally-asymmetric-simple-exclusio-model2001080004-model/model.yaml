@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Mcfarland2020TotallyAsymmetricSimpleExclusioModel2001080004Model'
-description: A stochastic simulation of yeast translation using Total Asymmetric Simple
-  Exclusion Principle (TASEP) principles, representing ribosomes, tRNAs, mRNAs, and
-  a tRNA re-charging process involving aminoa
+description: "A stochastic simulation of yeast translation using Total Asymmetric Simple Exclusion Principle (TASEP) principles, representing ribosomes, tRNAs, mRNAs, and a tRNA re-charging process involving aminoa. It can be used to explore generegulation mcfarland2020 totally asymmetric simple exclusio dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

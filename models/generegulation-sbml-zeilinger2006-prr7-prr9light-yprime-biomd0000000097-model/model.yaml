@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Zeilinger2006Prr7Prr9lightYprimeBiomd0000000097Model'
-description: The model reproduces the time profile of TOC1 and Y mRNA for a 8:16 cycle
-  as depicted in Fig7A and 7B. A simple algorithm in the event section accomplishes
-  the 8 hour light and 16 hour dark cycle. The
+description: "The model reproduces the time profile of TOC1 and Y mRNA for a 8:16 cycle as depicted in Fig7A and 7B. A simple algorithm in the event section accomplishes the 8 hour light and 16 hour dark cycle."
 standard: other
 tags:
 - generegulation

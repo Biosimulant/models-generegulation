@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Linke2017SynchronizationOfCyclinsExpressionBiomd0000000934Model'
-description: Modeling of the expression of cyclin B2 and B3 in the budding yeast cell
-  cycle
+description: "Modeling of the expression of cyclin B2 and B3 in the budding yeast cell cycle. It can be used to explore generegulation linke2017 synchronization of cyclins expression dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Ashall2009NfkappabDependentTranscriptionModel1509020000Model'
-description: 'Model taken from Ashall et al., Science, 2009 (http://www.sciencemag.org/content/324/5924/242.long).
-  Contact: mike.white@manchester.ac.uk. Simulation set for continuous treatment. For
-  pulsing treatmen'
+description: "Model taken from Ashall et al., Science, 2009 (http://www.sciencemag.org/content/324/5924/242.long). It can be used to explore generegulation ashall2009 nfkappab dependent transcription model1509020000 dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

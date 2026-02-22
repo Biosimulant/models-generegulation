@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Hu2020EColiTranslationModelModel2006210001Model'
-description: This translation model consists of 274 biochemical reactions, including
-  119 reactions with non-linear kinetics. This mechanistic model accounts for the
-  concentrations of mRNA, the ribosome, the differ
+description: "This translation model consists of 274 biochemical reactions, including 119 reactions with non-linear kinetics. This mechanistic model accounts for the concentrations of mRNA, the ribosome, the differ."
 standard: other
 tags:
 - generegulation

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Koster1988HistoneExpressionModel5954483266Model'
-description: "This model is described in the article: Kinetics of histone gene expression\
-  \ during early development of Xenopus laevis. Koster JG, Destr\xE9e OH and Westerhoff\
-  \ HV. J Theor Biol. 1988 Nov 21;135(2):139-67"
+description: "This model is described in the article: Kinetics of histone gene expression during early development of Xenopus laevis. It can be used to explore generegulation koster1988 histone expression model5954483266 dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

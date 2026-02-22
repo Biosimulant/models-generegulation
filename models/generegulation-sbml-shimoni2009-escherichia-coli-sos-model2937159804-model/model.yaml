@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Shimoni2009EscherichiaColiSosModel2937159804Model'
-description: Shimoni2009 - Escherichia Coli SOS Simple model, involving only the basic
-  components of the circuit, sufficient to explain the peaks in the promoter activities
-  of recA and lexA. This model is describe
+description: "Shimoni2009 - Escherichia Coli SOS Simple model, involving only the basic components of the circuit, sufficient to explain the peaks in the promoter activities of recA and lexA. It can be used to explore generegulation shimoni2009 escherichia coli sos model2937159804 dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Aguilera2017ModelForGeneConstitutiveExpressModel1608100000Model'
-description: Model destription:The model describes the stochastic dynamics of two
-  variables, protein and mRNA of a gene with constitutive expression. Publication:A
-  New Efficient Approach to Fit Stochastic Models o
+description: "Model destription:The model describes the stochastic dynamics of two variables, protein and mRNA of a gene with constitutive expression. Publication:A New Efficient Approach to Fit Stochastic Models o."
 standard: other
 tags:
 - generegulation

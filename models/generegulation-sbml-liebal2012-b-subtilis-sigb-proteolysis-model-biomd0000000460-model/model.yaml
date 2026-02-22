@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Liebal2012BSubtilisSigbProteolysisModelBiomd0000000460Model'
-description: Liebal2012 - B.subtilis sigB proteolysis model An important transcription
-  factor of B.subsilis is sigma B . Liebal et al. (2012) have performed experiments
-  in B.subtilis wild type and mutant straits t
+description: "Liebal2012 - B.subtilis sigB proteolysis model An important transcription factor of B.subsilis is sigma B . It can be used to explore generegulation liebal2012 b subtilis sigb proteolysis dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation

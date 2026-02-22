@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'GeneRegulation: Rantasalo2016SyntheticExpresionModulatorConsModel1510230001Model'
-description: 'Rantasalo2015-Synthetic_expresion_modulator_constitutiveSTF_VP16This
-  model is part of a family of models describing a modular synthetic expression system
-  that modulates the expression level of a gene '
+description: "Rantasalo2015-Synthetic_expresion_modulator_constitutiveSTF_VP16This model is part of a family of models describing a modular synthetic expression system that modulates the expression level of a gene. It can be used to explore generegulation rantasalo2016 synthetic expresion modulator cons dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
 - generegulation
