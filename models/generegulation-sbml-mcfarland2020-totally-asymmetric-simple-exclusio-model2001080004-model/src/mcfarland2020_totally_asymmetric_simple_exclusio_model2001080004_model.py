@@ -17,6 +17,10 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 import biosim
 from biosim.signals import BioSignal, SignalMetadata
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 class SbmlMcfarland2020TotallyAsymmetricSimpleExclusionProcess(biosim.BioModule):
     """BioModule wrapper for SBML model: McFarland2020 - Totally Asymmetric Simple Exclusion Process (TASEP) model describing the movement of particles (ribosomes) along a lattice (the mRNA)."""
 
@@ -60,7 +64,8 @@ class SbmlMcfarland2020TotallyAsymmetricSimpleExclusionProcess(biosim.BioModule)
         for sid in self._species_ids:
             try:
                 concentrations[sid] = float(self._rr[sid])
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
+                logger.warning("Failed to read species %s, defaulting to 0.0", sid)
                 concentrations[sid] = 0.0
         self._outputs = {
             "state": BioSignal(
