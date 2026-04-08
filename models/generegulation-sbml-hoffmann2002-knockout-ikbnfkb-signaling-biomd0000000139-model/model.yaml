@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Hoffmann2002KnockoutIkbnfkbSignalingBiomd0000000139Model'
+title: "Hoffmann2002_KnockOut_IkBNFkB_Signaling"
 description: "The model corresponds to the knock out model of beta-/-, epsilon -/- and reproduces the upper panel in Fig 2C. In order to reproduce the other knock out models the transcription rate of the species th."
 standard: other
 tags:

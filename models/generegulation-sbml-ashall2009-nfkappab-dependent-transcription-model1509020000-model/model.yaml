@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Ashall2009NfkappabDependentTranscriptionModel1509020000Model'
+title: "Ashall2009 - NFkappaB dependent transcription"
 description: "Model taken from Ashall et al., Science, 2009 (http://www.sciencemag.org/content/324/5924/242.long). It can be used to explore generegulation ashall2009 nfkappab dependent transcription model1509020000 dynamics and compare simulation behavior across conditions."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Werner2005IkappabKinaseModel1008110000Model'
+title: "Werner2005_IkappaB_kinase"
 description: "This is the model described in the article: Stimulus specificity of gene expression programs determined by temporal control of IKK activity. It can be used to explore generegulation werner2005 ikappab kinase model1008110000 dynamics and compare simulation behavior across conditions."
 standard: other
 tags:

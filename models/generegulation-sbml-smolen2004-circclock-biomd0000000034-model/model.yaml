@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Smolen2004CircclockBiomd0000000034Model'
+title: "Smolen2004_CircClock"
 description: "No inititial conditions are specified in the paper. Because there is a basal rate of transcription for each gene, it doesn't matter much."
 standard: other
 tags:

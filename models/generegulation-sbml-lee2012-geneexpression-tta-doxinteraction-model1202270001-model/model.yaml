@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Lee2012GeneexpressionTtaDoxinteractionModel1202270001Model'
+title: "Lee2012_GeneExpression_tTA-doxInteraction"
 description: "This model is from the article: A regulatory role for repeated decoy transcription factor binding sites in target gene expression. It can be used to explore generegulation lee2012 geneexpression tta doxinteraction model1202270001 dynamics and compare simulation behavior across conditions."
 standard: other
 tags:

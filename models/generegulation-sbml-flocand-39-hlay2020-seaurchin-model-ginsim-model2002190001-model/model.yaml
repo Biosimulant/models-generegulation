@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Flocand39Hlay2020SeaurchinModelGinsimModel2002190001Model'
+title: "Floc&#39;hlay2020 - SeaUrchin_model_ginsim"
 description: "Multilevel logical model encompassing the Nodal and BMP pathways together with key transcription factors setting the dorsal-ventral axis in the sea urchin P. It can be used to explore generegulation flocand 39 hlay2020 seaurchin ginsim dynamics and compare simulation behavior across conditions."
 standard: other
 tags:

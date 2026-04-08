@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Aguilera2017ModelForIrf7CircuitModel1608100001Model'
+title: "Aguilera2017 - Model for IRF7 circuit"
 description: "Model destription:The model describes the dynamics of murine IRF7 gene expression upon IFN stimulation. The present model comprises known key components and feedback mechanisms."
 standard: other
 tags:

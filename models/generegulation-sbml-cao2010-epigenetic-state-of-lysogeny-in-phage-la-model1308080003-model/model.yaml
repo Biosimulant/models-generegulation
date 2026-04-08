@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Cao2010EpigeneticStateOfLysogenyInPhageLaModel1308080003Model'
+title: "Cao2010 - Epigenetic state of lysogeny in phage lambda"
 description: "References:1. It can be used to explore generegulation cao2010 epigenetic state of lysogeny dynamics and compare simulation behavior across conditions."
 standard: other
 tags:

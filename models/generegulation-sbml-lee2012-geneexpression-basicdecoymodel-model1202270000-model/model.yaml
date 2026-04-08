@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Lee2012GeneexpressionBasicdecoymodelModel1202270000Model'
+title: "Lee2012_GeneExpression_BasicDecoyModel"
 description: "This model is from the article: A regulatory role for repeated decoy transcription factor binding sites in target gene expression. It can be used to explore generegulation lee2012 geneexpression basicdecoymodel model1202270000 dynamics and compare simulation behavior across conditions."
 standard: other
 tags:

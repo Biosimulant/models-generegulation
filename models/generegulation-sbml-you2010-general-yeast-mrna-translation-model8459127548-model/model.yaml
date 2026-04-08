@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: You2010GeneralYeastMrnaTranslationModel8459127548Model'
+title: "You2010_General_Yeast_mRNA_Translation"
 description: "This the model from the article: A quantitative model for mRNA translation in Saccharomyces cerevisiae. It can be used to explore generegulation you2010 general yeast mrna translation dynamics and compare simulation behavior across conditions."
 standard: other
 tags:

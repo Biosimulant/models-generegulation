@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Azpeitia2010GeneRegulatoryNetworkToMaintainModel1504170001Model'
+title: "Azpeitia2010 - Gene regulatory network to maintain the root stem cell niche (RSCN_GRN_2010b)"
 description: "Gene Regulation Azpeitia2010Gene Regulatory Network To Maintain Model1504170001Model represents core biological mechanisms from biomodels_ebi reference biomodels_ebi:MODEL1504170001. When you run it, you can inspect state and compare temporal behavior between baseline and adjusted inputs."
 standard: other
 tags:

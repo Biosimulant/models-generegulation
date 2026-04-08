@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Hat2016ReponseOfP53SystemToIrradiationInBiomd0000000943Model'
+title: "Hat2016 - Reponse of p53 System to irradiation in cell fate decision making"
 description: "The p53 transcription factor is a regulator of key cellular processes including DNA repair, cell cycle arrest, and apoptosis. In this theoretical study, we investigate how the complex circuitry of the."
 standard: other
 tags:

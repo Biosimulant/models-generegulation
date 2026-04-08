@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Dudziuk2019BiologicallySoundFormalModelOfHBiomd0000000843Model'
+title: "Dudziuk2019 - Biologically sound formal model of Hsp70 heat induction"
 description: "This is a mathematical model of Hsp70 induction. To model heat shock effects, the model incorporates temperature dependencies in transcirption to Hsp70 mRNA and in dissociation of transcriptional comp."
 standard: other
 tags:

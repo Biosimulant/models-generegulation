@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Khandibharad2022Il12RegulatingIl10ExpressionModel2109080001Model'
+title: "Khandibharad2022 - IL12 regulating IL10 expression in Leishmaniasis"
 description: "In this model, proinflammatory cytokines are eliminating the amastigotes by the production of NO controlled by NFAT5. It can be used to explore generegulation khandibharad2022 il12 regulating il10 expression dynamics and compare simulation behavior across conditions."
 standard: other
 tags:

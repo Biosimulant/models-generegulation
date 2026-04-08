@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'GeneRegulation: Lim2014HtlvIInfectionADynamicStruggleBetwBiomd0000000887Model'
+title: "Lim2014 - HTLV-I infection A dynamic struggle between viral persistence and host immunity"
 description: "This is a four-dimensional, non-linear system of ordinary differential equations that describes the dynamic interactions among viral expression, infected target cell activation, and the HTLV-I-specifi. It can be used to explore generegulation lim2014 htlv i infection a dynamics and compare simulation behavior across conditions."
 standard: other
 tags:
