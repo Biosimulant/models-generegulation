@@ -11,14 +11,13 @@ A stochastic simulation of yeast translation using Total Asymmetric Simple Exclu
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-mcfarland2020-totally-asymmetric-simple-exclusio-model2001080004-model
     alias: model
-    manifest_path: models/generegulation-sbml-mcfarland2020-totally-asymmetric-simple-exclusio-model2001080004-model/model.yaml
 ```
 
 ## Tags

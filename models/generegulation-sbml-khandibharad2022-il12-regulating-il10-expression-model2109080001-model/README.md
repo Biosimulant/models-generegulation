@@ -11,14 +11,13 @@ In this model, proinflammatory cytokines are eliminating the amastigotes by the 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-khandibharad2022-il12-regulating-il10-expression-model2109080001-model
     alias: model
-    manifest_path: models/generegulation-sbml-khandibharad2022-il12-regulating-il10-expression-model2109080001-model/model.yaml
 ```
 
 ## Tags

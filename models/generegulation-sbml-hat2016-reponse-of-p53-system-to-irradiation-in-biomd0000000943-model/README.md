@@ -11,14 +11,13 @@ The p53 transcription factor is a regulator of key cellular processes including 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the biomodels_ebi catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-hat2016-reponse-of-p53-system-to-irradiation-in-biomd0000000943-model
     alias: model
-    manifest_path: models/generegulation-sbml-hat2016-reponse-of-p53-system-to-irradiation-in-biomd0000000943-model/model.yaml
 ```
 
 ## Tags

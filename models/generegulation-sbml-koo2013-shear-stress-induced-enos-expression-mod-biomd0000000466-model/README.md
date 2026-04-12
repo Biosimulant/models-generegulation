@@ -11,14 +11,13 @@ Andrew Koo, David Nordsletten, Renato Umeton, Beracah Yankama, Shiva Ayyadurai, 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-koo2013-shear-stress-induced-enos-expression-mod-biomd0000000466-model
     alias: model
-    manifest_path: models/generegulation-sbml-koo2013-shear-stress-induced-enos-expression-mod-biomd0000000466-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This is a four-dimensional, non-linear system of ordinary differential equations
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the biomodels_ebi catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-lim2014-htlv-i-infection-a-dynamic-struggle-betw-biomd0000000887-model
     alias: model
-    manifest_path: models/generegulation-sbml-lim2014-htlv-i-infection-a-dynamic-struggle-betw-biomd0000000887-model/model.yaml
 ```
 
 ## Tags

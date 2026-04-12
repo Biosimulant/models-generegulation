@@ -11,14 +11,13 @@ References:1. Xiaomei Zhu, Lan Yin, Leroy Hood, David Galas and Ping Ao, Efficie
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-cao2010-epigenetic-state-of-lysogeny-in-phage-la-model1308080003-model
     alias: model
-    manifest_path: models/generegulation-sbml-cao2010-epigenetic-state-of-lysogeny-in-phage-la-model1308080003-model/model.yaml
 ```
 
 ## Tags

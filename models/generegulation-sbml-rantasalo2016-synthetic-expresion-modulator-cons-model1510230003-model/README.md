@@ -11,14 +11,13 @@ Rantasalo2015-Synthetic_expresion_modulator_constitutiveSTF_VP16_pBID2-EDcorePro
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-rantasalo2016-synthetic-expresion-modulator-cons-model1510230003-model
     alias: model
-    manifest_path: models/generegulation-sbml-rantasalo2016-synthetic-expresion-modulator-cons-model1510230003-model/model.yaml
 ```
 
 ## Tags

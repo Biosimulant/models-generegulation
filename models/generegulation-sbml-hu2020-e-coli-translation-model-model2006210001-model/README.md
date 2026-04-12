@@ -11,14 +11,13 @@ This translation model consists of 274 biochemical reactions, including 119 reac
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-hu2020-e-coli-translation-model-model2006210001-model
     alias: model
-    manifest_path: models/generegulation-sbml-hu2020-e-coli-translation-model-model2006210001-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This is the model described in the article: Stimulus specificity of gene express
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-werner2005-ikappab-kinase-model1008110000-model
     alias: model
-    manifest_path: models/generegulation-sbml-werner2005-ikappab-kinase-model1008110000-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Model taken from Ashall et al., Science, 2009 (http://www.sciencemag.org/content
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-ashall2009-nfkappab-dependent-transcription-model1509020000-model
     alias: model
-    manifest_path: models/generegulation-sbml-ashall2009-nfkappab-dependent-transcription-model1509020000-model/model.yaml
 ```
 
 ## Tags

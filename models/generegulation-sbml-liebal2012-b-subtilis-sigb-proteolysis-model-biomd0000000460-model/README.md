@@ -11,14 +11,13 @@ Liebal2012 - B.subtilis sigB proteolysis model An important transcription factor
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-liebal2012-b-subtilis-sigb-proteolysis-model-biomd0000000460-model
     alias: model
-    manifest_path: models/generegulation-sbml-liebal2012-b-subtilis-sigb-proteolysis-model-biomd0000000460-model/model.yaml
 ```
 
 ## Tags

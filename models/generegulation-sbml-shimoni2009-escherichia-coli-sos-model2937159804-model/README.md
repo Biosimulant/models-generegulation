@@ -11,14 +11,13 @@ Shimoni2009 - Escherichia Coli SOS Simple model, involving only the basic compon
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-shimoni2009-escherichia-coli-sos-model2937159804-model
     alias: model
-    manifest_path: models/generegulation-sbml-shimoni2009-escherichia-coli-sos-model2937159804-model/model.yaml
 ```
 
 ## Tags

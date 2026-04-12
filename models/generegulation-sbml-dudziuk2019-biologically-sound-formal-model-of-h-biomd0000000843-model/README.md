@@ -11,14 +11,13 @@ This is a mathematical model of Hsp70 induction. To model heat shock effects, th
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-dudziuk2019-biologically-sound-formal-model-of-h-biomd0000000843-model
     alias: model
-    manifest_path: models/generegulation-sbml-dudziuk2019-biologically-sound-formal-model-of-h-biomd0000000843-model/model.yaml
 ```
 
 ## Tags

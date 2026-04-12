@@ -11,14 +11,13 @@ Liebal2012 - B.subtilis transcription inhibition model An important transcriptio
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-liebal2012-b-subtilis-transcription-inhibition-m-biomd0000000461-model
     alias: model
-    manifest_path: models/generegulation-sbml-liebal2012-b-subtilis-transcription-inhibition-m-biomd0000000461-model/model.yaml
 ```
 
 ## Tags

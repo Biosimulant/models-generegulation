@@ -11,14 +11,13 @@ The model corresponds to the knock out model of beta-/-, epsilon -/- and reprodu
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-hoffmann2002-knockout-ikbnfkb-signaling-biomd0000000139-model
     alias: model
-    manifest_path: models/generegulation-sbml-hoffmann2002-knockout-ikbnfkb-signaling-biomd0000000139-model/model.yaml
 ```
 
 ## Tags

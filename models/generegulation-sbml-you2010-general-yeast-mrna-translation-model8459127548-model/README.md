@@ -11,14 +11,13 @@ This the model from the article: A quantitative model for mRNA translation in Sa
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-you2010-general-yeast-mrna-translation-model8459127548-model
     alias: model
-    manifest_path: models/generegulation-sbml-you2010-general-yeast-mrna-translation-model8459127548-model/model.yaml
 ```
 
 ## Tags

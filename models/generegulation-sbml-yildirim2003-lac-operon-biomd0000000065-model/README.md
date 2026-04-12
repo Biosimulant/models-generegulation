@@ -11,14 +11,13 @@ This a model from the article: Feedback regulation in the lactose operon: a math
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-yildirim2003-lac-operon-biomd0000000065-model
     alias: model
-    manifest_path: models/generegulation-sbml-yildirim2003-lac-operon-biomd0000000065-model/model.yaml
 ```
 
 ## Tags

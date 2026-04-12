@@ -11,14 +11,13 @@ The model reproduces the oscillations for mRNA and protein species as depicted i
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-xie2007-circclock-biomd0000000160-model
     alias: model
-    manifest_path: models/generegulation-sbml-xie2007-circclock-biomd0000000160-model/model.yaml
 ```
 
 ## Tags

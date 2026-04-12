@@ -11,14 +11,13 @@ The Synthetase Sequestration Model (SSM) is a simplified translation model that 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-mcfarland2020-synthetase-sequestration-model-a-c-model2001080005-model
     alias: model
-    manifest_path: models/generegulation-sbml-mcfarland2020-synthetase-sequestration-model-a-c-model2001080005-model/model.yaml
 ```
 
 ## Tags

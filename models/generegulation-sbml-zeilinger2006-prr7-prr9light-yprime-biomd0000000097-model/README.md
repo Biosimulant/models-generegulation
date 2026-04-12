@@ -11,14 +11,13 @@ The model reproduces the time profile of TOC1 and Y mRNA for a 8:16 cycle as dep
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-zeilinger2006-prr7-prr9light-yprime-biomd0000000097-model
     alias: model
-    manifest_path: models/generegulation-sbml-zeilinger2006-prr7-prr9light-yprime-biomd0000000097-model/model.yaml
 ```
 
 ## Tags

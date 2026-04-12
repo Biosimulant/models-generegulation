@@ -11,14 +11,13 @@ Rantasalo2015-Synthetic_expresion_modulator_inducedSTF_B42This model is part of 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-rantasalo2016-synthetic-expresion-modulator-indu-model1510230004-model
     alias: model
-    manifest_path: models/generegulation-sbml-rantasalo2016-synthetic-expresion-modulator-indu-model1510230004-model/model.yaml
 ```
 
 ## Tags

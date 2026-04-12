@@ -11,14 +11,13 @@ The ODE model is based on Batchelor et al., Mol. Syst. Biol. 7 (2011) and was ex
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-konrath2020-p53-signaling-model-model2004300002-model
     alias: model
-    manifest_path: models/generegulation-sbml-konrath2020-p53-signaling-model-model2004300002-model/model.yaml
 ```
 
 ## Tags

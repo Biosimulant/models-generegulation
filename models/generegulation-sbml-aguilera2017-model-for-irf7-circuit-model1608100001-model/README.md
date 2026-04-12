@@ -11,14 +11,13 @@ Model destription:The model describes the dynamics of murine IRF7 gene expressio
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the biomodels_ebi catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-aguilera2017-model-for-irf7-circuit-model1608100001-model
     alias: model
-    manifest_path: models/generegulation-sbml-aguilera2017-model-for-irf7-circuit-model1608100001-model/model.yaml
 ```
 
 ## Tags

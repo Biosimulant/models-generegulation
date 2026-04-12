@@ -11,14 +11,13 @@ Modeling of the expression of cyclin B2 and B3 in the budding yeast cell cycle
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-linke2017-synchronization-of-cyclins-expression-biomd0000000934-model
     alias: model
-    manifest_path: models/generegulation-sbml-linke2017-synchronization-of-cyclins-expression-biomd0000000934-model/model.yaml
 ```
 
 ## Tags

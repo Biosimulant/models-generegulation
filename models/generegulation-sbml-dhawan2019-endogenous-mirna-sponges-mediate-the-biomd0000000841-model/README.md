@@ -11,14 +11,13 @@ This is a delay differential equation model showing how non-coding RNA, acting a
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-dhawan2019-endogenous-mirna-sponges-mediate-the-biomd0000000841-model
     alias: model
-    manifest_path: models/generegulation-sbml-dhawan2019-endogenous-mirna-sponges-mediate-the-biomd0000000841-model/model.yaml
 ```
 
 ## Tags

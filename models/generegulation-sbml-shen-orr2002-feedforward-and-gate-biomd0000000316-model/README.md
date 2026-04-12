@@ -11,14 +11,13 @@ This is the coherent feed forward loop with an AND-gate like control of the resp
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/generegulation-sbml-shen-orr2002-feedforward-and-gate-biomd0000000316-model
     alias: model
-    manifest_path: models/generegulation-sbml-shen-orr2002-feedforward-and-gate-biomd0000000316-model/model.yaml
 ```
 
 ## Tags
