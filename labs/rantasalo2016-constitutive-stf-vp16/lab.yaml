@@ -1,0 +1,58 @@
+schema_version: '2.0'
+title: Rantasalo2016 Constitutive Stf Vp16 Lab
+description: constitutive synthetic expression modulator. Rantasalo2015-Synthetic_expresion_modulator_constitutiveSTF_VP16This
+  model is part of a family of models describing a modular synthetic expression system
+  that modulates the expression level of a gene. It can be used to explore generegulation
+  rantasalo2016 synthetic expresion modulator cons dynamics and compare simulation
+  behavior across conditions.
+models:
+- alias: rantasalo2016_constitutive_stf_vp16
+  path: models/core
+  parameters:
+    model_path: data/MODEL1510230001.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: rantasalo2016_constitutive_stf_vp16.mcherry_messenger_rna
+  to:
+  - visualisation.rantasalo2016_constitutive_stf_vp16_mcherry_messenger_rna
+- from: rantasalo2016_constitutive_stf_vp16.mcherry_reporter
+  to:
+  - visualisation.rantasalo2016_constitutive_stf_vp16_mcherry_reporter
+- from: rantasalo2016_constitutive_stf_vp16.cytosolic_transcription_factor
+  to:
+  - visualisation.rantasalo2016_constitutive_stf_vp16_cytosolic_transcription_factor
+- from: rantasalo2016_constitutive_stf_vp16.nuclear_transcription_factor
+  to:
+  - visualisation.rantasalo2016_constitutive_stf_vp16_nuclear_transcription_factor
+- from: rantasalo2016_constitutive_stf_vp16.state
+  to:
+  - visualisation.rantasalo2016_constitutive_stf_vp16_state
+- from: rantasalo2016_constitutive_stf_vp16.summary
+  to:
+  - visualisation.rantasalo2016_constitutive_stf_vp16_summary
+- from: rantasalo2016_constitutive_stf_vp16.species_labels
+  to:
+  - visualisation.rantasalo2016_constitutive_stf_vp16_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: mcherry_messenger_rna
+    maps_to: rantasalo2016_constitutive_stf_vp16.mcherry_messenger_rna
+  - name: mcherry_reporter
+    maps_to: rantasalo2016_constitutive_stf_vp16.mcherry_reporter
+  - name: cytosolic_transcription_factor
+    maps_to: rantasalo2016_constitutive_stf_vp16.cytosolic_transcription_factor
+  - name: nuclear_transcription_factor
+    maps_to: rantasalo2016_constitutive_stf_vp16.nuclear_transcription_factor
+  - name: state
+    maps_to: rantasalo2016_constitutive_stf_vp16.state
+  - name: summary
+    maps_to: rantasalo2016_constitutive_stf_vp16.summary
+  - name: species_labels
+    maps_to: rantasalo2016_constitutive_stf_vp16.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

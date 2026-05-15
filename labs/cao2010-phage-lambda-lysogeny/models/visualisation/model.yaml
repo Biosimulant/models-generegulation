@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Cao2010 - Epigenetic state of lysogeny in phage lambda Visualisation
+description: Dedicated presentation model for phage lambda lysogeny switch.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Cao2010 Phage Lambda Lysogeny Lab
+    question: Which regulatory state dominates the phage switch trajectory?
+    answer_focus: lysogeny switch species and dominance
+    caveat: No biological equations are hand translated.
+    alias: cao2010_phage_lambda_lysogeny
+    observables:
+    - id: CI
+      port: ci_repressor
+      label: pCI
+    - id: Cro
+      port: cro_repressor
+      label: pCro
+    - id: CI2
+      port: ci_dimer
+      label: R2
+    - id: Cro2
+      port: cro_dimer
+      label: C2
+    state_observables:
+    - OR1
+    - OR2
+    - OR3
+    - CI
+    - Cro
+    - CI2
+    - Cro2
+    - ROR1
+    - ROR2
+    - ROR3
+    - COR1
+    - COR2
+    - COR3
+    - EmptySet
+    species_label_ids:
+    - OR1
+    - OR2
+    - OR3
+    - CI
+    - Cro
+    - CI2
+    - Cro2
+    - ROR1
+    - ROR2
+    - ROR3
+    - COR1
+    - COR2
+    - COR3
+    - EmptySet
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

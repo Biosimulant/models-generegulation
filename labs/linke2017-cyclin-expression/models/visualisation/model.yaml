@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Linke2017 - Synchronization of Cyclins' expression by the Fkh2 transcription
+  factor in the budding yeast cell cycle Visualisation
+description: Dedicated presentation model for yeast cyclin B2/B3 expression.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Linke2017 Cyclin Expression Lab
+    question: Are cyclin expression modules synchronized?
+    answer_focus: cell-cycle expression synchronization
+    caveat: Gene-expression relevant despite cell-cycle context.
+    alias: linke2017_cyclin_expression
+    observables:
+    - id: Sic1
+      port: sic1
+      label: Sic1
+    - id: Cdk1_Clb5or6
+      port: cdk1_clb5_or_clb6
+      label: Cdk1 Clb5or6
+    - id: Cdk1_Clb3or4
+      port: cdk1_clb3_or_clb4
+      label: Cdk1 Clb3or4
+    - id: Cdk1_Clb1or2
+      port: cdk1_clb1_or_clb2
+      label: Cdk1 Clb1or2
+    state_observables:
+    - Sic1
+    - Cdk1_Clb5or6
+    - Cdk1_Clb5or6_Sic1
+    - Clb5or6_degraded
+    - Cdk1_Clb3or4
+    - Cdk1_Clb3or4_Sic1
+    - Clb3or4_degraded
+    - Cdk1_Clb1or2
+    - Cdk1_Clb1or2_Sic1
+    - Clb1or2_degraded
+    - Sic1_degraded_re14
+    - Sic1_degraded_re18
+    - Sic1_degraded_re5
+    species_label_ids:
+    - Sic1
+    - Cdk1_Clb5or6
+    - Cdk1_Clb5or6_Sic1
+    - Clb5or6_degraded
+    - Cdk1_Clb3or4
+    - Cdk1_Clb3or4_Sic1
+    - Clb3or4_degraded
+    - Cdk1_Clb1or2
+    - Cdk1_Clb1or2_Sic1
+    - Clb1or2_degraded
+    - Sic1_degraded_re14
+    - Sic1_degraded_re18
+    - Sic1_degraded_re5
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

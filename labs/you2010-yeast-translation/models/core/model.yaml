@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: You2010_General_Yeast_mRNA_Translation
+description: 'This the model from the article: A quantitative model for mRNA translation
+  in Saccharomyces cerevisiae. It can be used to explore generegulation you2010 general
+  yeast mrna translation dynamics and compare simulation behavior across conditions.'
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Tao You
+- George M Coghill
+- Alistair J P Brown
+upstream:
+  id: biomodels_ebi:MODEL8459127548
+  source_db: biomodels_ebi
+  source_id: MODEL8459127548
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL8459127548
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL8459127548?filename=MODEL8459127548_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.you2010_general_yeast_mrna_translation_model8459127548_model:You2010GeneralYeastMrnaTranslationModel8459127548Model
+  init_kwargs:
+    model_path: data/MODEL8459127548.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: eif2_gdp
+    maps_to: eIF2GDP
+    label: eIF2 GDP
+    description: eIF2 GDP observable. Maps to SBML symbol `eIF2GDP`.
+  - name: eif2b
+    maps_to: eIF2B
+    label: eIF2B
+    description: eIF2B observable. Maps to SBML symbol `eIF2B`.
+  - name: initiation_complex_43s
+    maps_to: _43S
+    label: 43S
+    description: 43S observable. Maps to SBML symbol `_43S`.
+  - name: ribosome_mrna_complex
+    maps_to: RibosomemRNA
+    label: Ribosome mRNA
+    description: Ribosome mRNA observable. Maps to SBML symbol `RibosomemRNA`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

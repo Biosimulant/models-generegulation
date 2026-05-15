@@ -1,0 +1,58 @@
+schema_version: '2.0'
+title: Grunwald2008 Duchenne Gene Regulation Lab
+description: Duchenne muscular dystrophy gene-regulatory network. Gene Regulation
+  Grunwald2008Gene Regulation Of The Duchenne Mus Model1403120000Model models core
+  biological dynamics as a OTHER simulation curated from biomodels_ebi (biomodels_ebi:MODEL1403120000),
+  focused on. When you run it, you can track state over time and compare response
+  patterns across parameter settings.
+models:
+- alias: grunwald2008_duchenne_gene_regulation
+  path: models/core
+  parameters:
+    model_path: data/MODEL1403120000.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: grunwald2008_duchenne_gene_regulation.calcium_pool
+  to:
+  - visualisation.grunwald2008_duchenne_gene_regulation_calcium_pool
+- from: grunwald2008_duchenne_gene_regulation.nfatc
+  to:
+  - visualisation.grunwald2008_duchenne_gene_regulation_nfatc
+- from: grunwald2008_duchenne_gene_regulation.anf_expression
+  to:
+  - visualisation.grunwald2008_duchenne_gene_regulation_anf_expression
+- from: grunwald2008_duchenne_gene_regulation.alpha_actin
+  to:
+  - visualisation.grunwald2008_duchenne_gene_regulation_alpha_actin
+- from: grunwald2008_duchenne_gene_regulation.state
+  to:
+  - visualisation.grunwald2008_duchenne_gene_regulation_state
+- from: grunwald2008_duchenne_gene_regulation.summary
+  to:
+  - visualisation.grunwald2008_duchenne_gene_regulation_summary
+- from: grunwald2008_duchenne_gene_regulation.species_labels
+  to:
+  - visualisation.grunwald2008_duchenne_gene_regulation_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: calcium_pool
+    maps_to: grunwald2008_duchenne_gene_regulation.calcium_pool
+  - name: nfatc
+    maps_to: grunwald2008_duchenne_gene_regulation.nfatc
+  - name: anf_expression
+    maps_to: grunwald2008_duchenne_gene_regulation.anf_expression
+  - name: alpha_actin
+    maps_to: grunwald2008_duchenne_gene_regulation.alpha_actin
+  - name: state
+    maps_to: grunwald2008_duchenne_gene_regulation.state
+  - name: summary
+    maps_to: grunwald2008_duchenne_gene_regulation.summary
+  - name: species_labels
+    maps_to: grunwald2008_duchenne_gene_regulation.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

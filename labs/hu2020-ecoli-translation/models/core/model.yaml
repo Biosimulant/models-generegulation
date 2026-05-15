@@ -1,0 +1,70 @@
+schema_version: '2.0'
+title: Hu2020 - E. coli translation model
+description: This translation model consists of 274 biochemical reactions, including
+  119 reactions with non-linear kinetics. This mechanistic model accounts for the
+  concentrations of mRNA, the ribosome, the differ.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Xiao-Pan Hu
+- Hugo Dourado
+- Peter Schubert
+- Lercher MJ
+upstream:
+  id: biomodels_ebi:MODEL2006210001
+  source_db: biomodels_ebi
+  source_id: MODEL2006210001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2006210001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2006210001?filename=Data-S1.xml
+  license: CC0
+biosim:
+  entrypoint: src.hu2020_e_coli_translation_model_model2006210001_model:Hu2020EColiTranslationModelModel2006210001Model
+  init_kwargs:
+    model_path: data/MODEL2006210001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: elongation_factor_tu
+    maps_to: EFTu
+    label: translation elongation factor Tu (EF Tu)
+    description: translation elongation factor Tu (EF Tu) observable. Maps to SBML
+      symbol `EFTu`.
+  - name: elongation_factor_tu_gtp
+    maps_to: EFTu_GTP
+    label: The complex of EF Tu and GTP
+    description: The complex of EF Tu and GTP observable. Maps to SBML symbol `EFTu_GTP`.
+  - name: elongation_factor_ts
+    maps_to: EFTs
+    label: translation elongation factor Ts (EF Ts)
+    description: translation elongation factor Ts (EF Ts) observable. Maps to SBML
+      symbol `EFTs`.
+  - name: alanine_trna_pool
+    maps_to: Ala1B_tRNA
+    label: charged tRNA Ala1B
+    description: charged tRNA Ala1B observable. Maps to SBML symbol `Ala1B_tRNA`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

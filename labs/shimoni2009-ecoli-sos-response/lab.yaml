@@ -1,0 +1,58 @@
+schema_version: '2.0'
+title: Shimoni2009 Ecoli Sos Response Lab
+description: E. coli SOS DNA-damage circuit. Shimoni2009 - Escherichia Coli SOS Simple
+  model, involving only the basic components of the circuit, sufficient to explain
+  the peaks in the promoter activities of recA and lexA. It can be used to explore
+  generegulation shimoni2009 escherichia coli sos model2937159804 dynamics and compare
+  simulation behavior across conditions.
+models:
+- alias: shimoni2009_ecoli_sos_response
+  path: models/core
+  parameters:
+    model_path: data/MODEL2937159804.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: shimoni2009_ecoli_sos_response.lexa
+  to:
+  - visualisation.shimoni2009_ecoli_sos_response_lexa
+- from: shimoni2009_ecoli_sos_response.reca
+  to:
+  - visualisation.shimoni2009_ecoli_sos_response_reca
+- from: shimoni2009_ecoli_sos_response.lexa_messenger_rna
+  to:
+  - visualisation.shimoni2009_ecoli_sos_response_lexa_messenger_rna
+- from: shimoni2009_ecoli_sos_response.reca_messenger_rna
+  to:
+  - visualisation.shimoni2009_ecoli_sos_response_reca_messenger_rna
+- from: shimoni2009_ecoli_sos_response.state
+  to:
+  - visualisation.shimoni2009_ecoli_sos_response_state
+- from: shimoni2009_ecoli_sos_response.summary
+  to:
+  - visualisation.shimoni2009_ecoli_sos_response_summary
+- from: shimoni2009_ecoli_sos_response.species_labels
+  to:
+  - visualisation.shimoni2009_ecoli_sos_response_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: lexa
+    maps_to: shimoni2009_ecoli_sos_response.lexa
+  - name: reca
+    maps_to: shimoni2009_ecoli_sos_response.reca
+  - name: lexa_messenger_rna
+    maps_to: shimoni2009_ecoli_sos_response.lexa_messenger_rna
+  - name: reca_messenger_rna
+    maps_to: shimoni2009_ecoli_sos_response.reca_messenger_rna
+  - name: state
+    maps_to: shimoni2009_ecoli_sos_response.state
+  - name: summary
+    maps_to: shimoni2009_ecoli_sos_response.summary
+  - name: species_labels
+    maps_to: shimoni2009_ecoli_sos_response.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

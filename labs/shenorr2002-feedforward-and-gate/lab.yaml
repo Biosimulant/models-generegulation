@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Shenorr2002 Feedforward And Gate Lab
+description: 'coherent feed-forward loop. This is the coherent feed forward loop with
+  an AND-gate like control of the response operon described in the article: Network
+  motifs in the transcriptional regulation network of Escherichia coli Shai. It can
+  be used to explore generegulation shen orr2002 feedforward and gate dynamics and
+  compare simulation behavior across conditions.'
+models:
+- alias: shenorr2002_feedforward_and_gate
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000316.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: shenorr2002_feedforward_and_gate.intermediate_regulator_y
+  to:
+  - visualisation.shenorr2002_feedforward_and_gate_intermediate_regulator_y
+- from: shenorr2002_feedforward_and_gate.response_operon_z
+  to:
+  - visualisation.shenorr2002_feedforward_and_gate_response_operon_z
+- from: shenorr2002_feedforward_and_gate.state
+  to:
+  - visualisation.shenorr2002_feedforward_and_gate_state
+- from: shenorr2002_feedforward_and_gate.summary
+  to:
+  - visualisation.shenorr2002_feedforward_and_gate_summary
+- from: shenorr2002_feedforward_and_gate.species_labels
+  to:
+  - visualisation.shenorr2002_feedforward_and_gate_species_labels
+io:
+  inputs:
+  - name: input_signal_x
+    maps_to: shenorr2002_feedforward_and_gate.input_signal_x
+    label: Input signal X
+    description: Boundary species `X`, the source upstream input to the coherent feed-forward
+      loop.
+  outputs:
+  - name: intermediate_regulator_y
+    maps_to: shenorr2002_feedforward_and_gate.intermediate_regulator_y
+  - name: response_operon_z
+    maps_to: shenorr2002_feedforward_and_gate.response_operon_z
+  - name: state
+    maps_to: shenorr2002_feedforward_and_gate.state
+  - name: summary
+    maps_to: shenorr2002_feedforward_and_gate.summary
+  - name: species_labels
+    maps_to: shenorr2002_feedforward_and_gate.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

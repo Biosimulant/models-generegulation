@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Aguilera2017 - Model for IRF7 circuit Visualisation
+description: Dedicated presentation model for murine IRF7/IFN gene circuit.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Aguilera2017 Irf7 Circuit Lab
+    question: How does the IRF7 circuit respond over model time?
+    answer_focus: IRF7 feedback and IFN-response species
+    caveat: No stimulus input is exposed unless an SBML boundary symbol is unambiguous.
+    alias: aguilera2017_irf7_circuit
+    observables:
+    - id: IRF7
+      port: irf7
+      label: IRF7
+    - id: IRF7phosp
+      port: phosphorylated_irf7
+      label: IRF7phosp
+    - id: IRF7dimer
+      port: irf7_dimer
+      label: IRF7dimer
+    - id: IFN
+      port: interferon
+      label: IFN
+    state_observables:
+    - Pa
+    - ISGF3
+    - IRF7
+    - IRF7phosp
+    - IRF7dimer
+    - mRNA
+    - IFN
+    species_label_ids:
+    - Pa
+    - ISGF3
+    - IRF7
+    - IRF7phosp
+    - IRF7dimer
+    - mRNA
+    - IFN
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Liebal2012 - B.subtilis transcription inhibition model Visualisation
+description: Dedicated presentation model for B. subtilis sigma-B transcription inhibition.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Liebal2012 Sigb Transcription Inhibition Lab
+    question: How does transcription inhibition shape sigma-B module state?
+    answer_focus: sigma-B transcription inhibition response
+    caveat: IPTG is exposed because it is a source boundary species; variant identity
+      is preserved in metadata.
+    alias: liebal2012_sigb_transcription_inhibition
+    observables:
+    - id: sigb
+      port: sigma_b
+      label: sigb
+    - id: lacz
+      port: lacz_reporter
+      label: lacz
+    - id: x
+      port: model_state_x
+      label: x
+    state_observables:
+    - sigb
+    - lacz
+    - x
+    species_label_ids:
+    - sigb
+    - lacz
+    - x
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: You2010 Yeast Translation Lab
+description: 'yeast mRNA translation. This the model from the article: A quantitative
+  model for mRNA translation in Saccharomyces cerevisiae. It can be used to explore
+  generegulation you2010 general yeast mrna translation dynamics and compare simulation
+  behavior across conditions.'
+models:
+- alias: you2010_yeast_translation
+  path: models/core
+  parameters:
+    model_path: data/MODEL8459127548.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: you2010_yeast_translation.eif2_gdp
+  to:
+  - visualisation.you2010_yeast_translation_eif2_gdp
+- from: you2010_yeast_translation.eif2b
+  to:
+  - visualisation.you2010_yeast_translation_eif2b
+- from: you2010_yeast_translation.initiation_complex_43s
+  to:
+  - visualisation.you2010_yeast_translation_initiation_complex_43s
+- from: you2010_yeast_translation.ribosome_mrna_complex
+  to:
+  - visualisation.you2010_yeast_translation_ribosome_mrna_complex
+- from: you2010_yeast_translation.state
+  to:
+  - visualisation.you2010_yeast_translation_state
+- from: you2010_yeast_translation.summary
+  to:
+  - visualisation.you2010_yeast_translation_summary
+- from: you2010_yeast_translation.species_labels
+  to:
+  - visualisation.you2010_yeast_translation_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: eif2_gdp
+    maps_to: you2010_yeast_translation.eif2_gdp
+  - name: eif2b
+    maps_to: you2010_yeast_translation.eif2b
+  - name: initiation_complex_43s
+    maps_to: you2010_yeast_translation.initiation_complex_43s
+  - name: ribosome_mrna_complex
+    maps_to: you2010_yeast_translation.ribosome_mrna_complex
+  - name: state
+    maps_to: you2010_yeast_translation.state
+  - name: summary
+    maps_to: you2010_yeast_translation.summary
+  - name: species_labels
+    maps_to: you2010_yeast_translation.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

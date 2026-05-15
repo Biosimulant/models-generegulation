@@ -1,0 +1,73 @@
+schema_version: '2.0'
+title: Rantasalo2016 - Synthetic expresion modulator constitutive STF_VP16 Visualisation
+description: Dedicated presentation model for constitutive synthetic expression modulator.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Rantasalo2016 Constitutive Stf Vp16 Lab
+    question: Does the synthetic modulator drive reporter expression?
+    answer_focus: synthetic expression output
+    caveat: Variant identity is preserved in metadata.
+    alias: rantasalo2016_constitutive_stf_vp16
+    observables:
+    - id: MmCherryc
+      port: mcherry_messenger_rna
+      label: MmCherryc
+    - id: mCherryc
+      port: mcherry_reporter
+      label: mCherryc
+    - id: TFc
+      port: cytosolic_transcription_factor
+      label: TFc
+    - id: TFn
+      port: nuclear_transcription_factor
+      label: TFn
+    state_observables:
+    - MmCherryc
+    - mCherryc
+    - TFc
+    - MTFc
+    - Pol
+    - TFn_B
+    - CP
+    - Pol_TFn_B
+    - TFn
+    - Pol_DTF
+    - DTF
+    - B
+    - Pol_TFn_B_CP
+    species_label_ids:
+    - MmCherryc
+    - mCherryc
+    - TFc
+    - MTFc
+    - Pol
+    - TFn_B
+    - CP
+    - Pol_TFn_B
+    - TFn
+    - Pol_DTF
+    - DTF
+    - B
+    - Pol_TFn_B_CP
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

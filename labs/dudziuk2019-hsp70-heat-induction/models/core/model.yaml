@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Dudziuk2019 - Biologically sound formal model of Hsp70 heat induction
+description: This is a mathematical model of Hsp70 induction. To model heat shock
+  effects, the model incorporates temperature dependencies in transcirption to Hsp70
+  mRNA and in dissociation of transcriptional comp.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Grzegorz Dudziuk
+- Weronika Wronowska
+- Anna Gambin
+- "Zuzanna Szyma\u0144ska"
+- "Miko\u0142aj Rybi\u0144ski"
+upstream:
+  id: biomodels_ebi:BIOMD0000000843
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000843
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000843
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000843?filename=Dudziuk2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.dudziuk2019_biologically_sound_formal_model_of_h_biomd0000000843_model:Dudziuk2019BiologicallySoundFormalModelOfHBiomd0000000843Model
+  init_kwargs:
+    model_path: data/BIOMD0000000843.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: heat_shock_protein
+    maps_to: HSP
+    label: HSP
+    description: HSP observable. Maps to SBML symbol `HSP`.
+  - name: heat_shock_factor
+    maps_to: HSF
+    label: HSF
+    description: HSF observable. Maps to SBML symbol `HSF`.
+  - name: hsp70_messenger_rna
+    maps_to: mRNA
+    label: mRNA
+    description: mRNA observable. Maps to SBML symbol `mRNA`.
+  - name: protein_product
+    maps_to: P
+    label: P
+    description: P observable. Maps to SBML symbol `P`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

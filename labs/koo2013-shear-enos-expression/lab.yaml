@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Koo2013 Shear Enos Expression Lab
+description: "shear-stress induced eNOS expression. Andrew Koo, David Nordsletten,\
+  \ Renato Umeton, Beracah Yankama, Shiva Ayyadurai, Guillermo Garc\xEDa-Carde\xF1\
+  a & C. It can be used to explore generegulation koo2013 shear stress induced enos\
+  \ dynamics and compare simulation behavior across conditions."
+models:
+- alias: koo2013_shear_enos_expression
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000466.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: koo2013_shear_enos_expression.enos
+  to:
+  - visualisation.koo2013_shear_enos_expression_enos
+- from: koo2013_shear_enos_expression.klf2
+  to:
+  - visualisation.koo2013_shear_enos_expression_klf2
+- from: koo2013_shear_enos_expression.ap1
+  to:
+  - visualisation.koo2013_shear_enos_expression_ap1
+- from: koo2013_shear_enos_expression.active_ras
+  to:
+  - visualisation.koo2013_shear_enos_expression_active_ras
+- from: koo2013_shear_enos_expression.state
+  to:
+  - visualisation.koo2013_shear_enos_expression_state
+- from: koo2013_shear_enos_expression.summary
+  to:
+  - visualisation.koo2013_shear_enos_expression_summary
+- from: koo2013_shear_enos_expression.species_labels
+  to:
+  - visualisation.koo2013_shear_enos_expression_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: enos
+    maps_to: koo2013_shear_enos_expression.enos
+  - name: klf2
+    maps_to: koo2013_shear_enos_expression.klf2
+  - name: ap1
+    maps_to: koo2013_shear_enos_expression.ap1
+  - name: active_ras
+    maps_to: koo2013_shear_enos_expression.active_ras
+  - name: state
+    maps_to: koo2013_shear_enos_expression.state
+  - name: summary
+    maps_to: koo2013_shear_enos_expression.summary
+  - name: species_labels
+    maps_to: koo2013_shear_enos_expression.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

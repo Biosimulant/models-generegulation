@@ -1,0 +1,115 @@
+schema_version: '2.0'
+title: Koo2013 - Shear stress induced eNOS expression - Model 3 Visualisation
+description: Dedicated presentation model for shear-stress induced eNOS expression.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Koo2013 Shear Enos Expression Lab
+    question: Does shear-associated signaling increase eNOS expression markers?
+    answer_focus: shear-to-eNOS expression cascade
+    caveat: Cross-domain but valid as a gene-expression/signaling model.
+    alias: koo2013_shear_enos_expression
+    observables:
+    - id: s106
+      port: enos
+      label: eNOS
+    - id: s49
+      port: klf2
+      label: KLF2
+    - id: s42
+      port: ap1
+      label: AP 1
+    - id: s102
+      port: active_ras
+      label: Ras:GTP
+    state_observables:
+    - s35
+    - s37
+    - s38
+    - s39
+    - s42
+    - s43
+    - s44
+    - s49
+    - s51
+    - s91
+    - s92
+    - s93
+    - s94
+    - s95
+    - s96
+    - s97
+    - s98
+    - s99
+    - s100
+    - s101
+    - s102
+    - s103
+    - s104
+    - s105
+    - s106
+    - s107
+    - s108
+    - s110
+    - s111
+    - s112
+    - s113
+    - s114
+    - s115
+    - s119
+    species_label_ids:
+    - s35
+    - s37
+    - s38
+    - s39
+    - s42
+    - s43
+    - s44
+    - s49
+    - s51
+    - s91
+    - s92
+    - s93
+    - s94
+    - s95
+    - s96
+    - s97
+    - s98
+    - s99
+    - s100
+    - s101
+    - s102
+    - s103
+    - s104
+    - s105
+    - s106
+    - s107
+    - s108
+    - s110
+    - s111
+    - s112
+    - s113
+    - s114
+    - s115
+    - s119
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

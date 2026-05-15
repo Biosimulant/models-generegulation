@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Zhu2007_TF_modulated_by_Calcium Visualisation
+description: Dedicated presentation model for calcium-modulated transcription factor
+  activation.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Zhu2007 Calcium Transcription Factor Lab
+    question: Does calcium modulation activate the transcription factor?
+    answer_focus: calcium-to-transcription-factor activation
+    caveat: Labels are conservative for a three-species model.
+    alias: zhu2007_calcium_transcription_factor
+    observables:
+    - id: X
+      port: active_transcription_factor
+      label: TF A
+    - id: Y
+      port: stored_calcium
+      label: Calcium in store
+    - id: Z
+      port: cytoplasmic_calcium
+      label: Calcium in cytoplasm
+    state_observables:
+    - X
+    - Y
+    - Z
+    species_label_ids:
+    - X
+    - Y
+    - Z
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

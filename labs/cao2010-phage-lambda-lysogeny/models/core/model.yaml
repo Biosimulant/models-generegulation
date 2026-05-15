@@ -1,0 +1,66 @@
+schema_version: '2.0'
+title: Cao2010 - Epigenetic state of lysogeny in phage lambda
+description: References:1. It can be used to explore generegulation cao2010 epigenetic
+  state of lysogeny dynamics and compare simulation behavior across conditions.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Youfang Cao
+- Hsiao-Mei Lu
+- Jie Liang
+upstream:
+  id: biomodels_ebi:MODEL1308080003
+  source_db: biomodels_ebi
+  source_id: MODEL1308080003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1308080003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1308080003?filename=MODEL1308080003_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.cao2010_epigenetic_state_of_lysogeny_in_phage_la_model1308080003_model:Cao2010EpigeneticStateOfLysogenyInPhageLaModel1308080003Model
+  init_kwargs:
+    model_path: data/MODEL1308080003.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: ci_repressor
+    maps_to: CI
+    label: pCI
+    description: pCI observable. Maps to SBML symbol `CI`.
+  - name: cro_repressor
+    maps_to: Cro
+    label: pCro
+    description: pCro observable. Maps to SBML symbol `Cro`.
+  - name: ci_dimer
+    maps_to: CI2
+    label: R2
+    description: R2 observable. Maps to SBML symbol `CI2`.
+  - name: cro_dimer
+    maps_to: Cro2
+    label: C2
+    description: C2 observable. Maps to SBML symbol `Cro2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

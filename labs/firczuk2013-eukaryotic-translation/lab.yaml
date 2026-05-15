@@ -1,0 +1,58 @@
+schema_version: '2.0'
+title: Firczuk2013 Eukaryotic Translation Lab
+description: yeast mRNA translation machinery. Firczuk2013 - Eukaryotic mRNA translation
+  machinery This is a model of Saccharomyces cerevisiae mRNA translation which includes
+  the initiation, elongation and termination phases. It can be used to explore generegulation
+  firczuk2013 eukaryotic mrna translation machiner dynamics and compare simulation
+  behavior across conditions.
+models:
+- alias: firczuk2013_eukaryotic_translation
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000457.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: firczuk2013_eukaryotic_translation.mrna_cap
+  to:
+  - visualisation.firczuk2013_eukaryotic_translation_mrna_cap
+- from: firczuk2013_eukaryotic_translation.initiation_complex_43s
+  to:
+  - visualisation.firczuk2013_eukaryotic_translation_initiation_complex_43s
+- from: firczuk2013_eukaryotic_translation.eif2_gdp
+  to:
+  - visualisation.firczuk2013_eukaryotic_translation_eif2_gdp
+- from: firczuk2013_eukaryotic_translation.eif2b
+  to:
+  - visualisation.firczuk2013_eukaryotic_translation_eif2b
+- from: firczuk2013_eukaryotic_translation.state
+  to:
+  - visualisation.firczuk2013_eukaryotic_translation_state
+- from: firczuk2013_eukaryotic_translation.summary
+  to:
+  - visualisation.firczuk2013_eukaryotic_translation_summary
+- from: firczuk2013_eukaryotic_translation.species_labels
+  to:
+  - visualisation.firczuk2013_eukaryotic_translation_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: mrna_cap
+    maps_to: firczuk2013_eukaryotic_translation.mrna_cap
+  - name: initiation_complex_43s
+    maps_to: firczuk2013_eukaryotic_translation.initiation_complex_43s
+  - name: eif2_gdp
+    maps_to: firczuk2013_eukaryotic_translation.eif2_gdp
+  - name: eif2b
+    maps_to: firczuk2013_eukaryotic_translation.eif2b
+  - name: state
+    maps_to: firczuk2013_eukaryotic_translation.state
+  - name: summary
+    maps_to: firczuk2013_eukaryotic_translation.summary
+  - name: species_labels
+    maps_to: firczuk2013_eukaryotic_translation.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

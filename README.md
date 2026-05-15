@@ -1,5 +1,8 @@
 # models-generegulation
 
+> Storage-only repo: each former root model now lives in `labs/<slug>/model/` and is wrapped by
+> `labs/<slug>/lab.yaml`. This repo has no repo-level import catalog and no composed labs at the root.
+
 Curated collection of **gene regulation** simulation models for the **biosim** platform. This repository contains computational models of transcriptional regulation, gene regulatory networks, transcription factor dynamics, epigenetic control, and post-transcriptional regulation including miRNA and mRNA translation.
 
 ## What's Inside
@@ -59,9 +62,9 @@ Every model implements the `biosim.BioModule` interface:
 
 - **`inputs()`** — declares named input signals the module consumes
 - **`outputs()`** — declares named output signals the module produces
-- **`advance_to(t)`** — advances the model's internal state to time `t`
+- **`advance_window(t)`** — advances the model's internal state to time `t`
 
-Most models include Python source under `src/` and can be wired together via `space.yaml` for multi-layered gene regulation studies.
+Most models include Python source under `src/` and can be wired together via `lab.yaml` for multi-layered gene regulation studies.
 
 ### Model Standards
 
@@ -70,7 +73,7 @@ All models in this repository:
 - Are sourced from BioModels and curated regulatory network databases
 - Include tellurium runtime for SBML execution
 - Provide `state` output for monitoring gene expression dynamics
-- Support configurable timesteps via `min_dt` parameter
+- Support configurable timesteps via `communication_step` parameter
 
 ## Getting Started
 
@@ -96,7 +99,7 @@ pip install "biosim @ git+https://github.com/BioSimulant/biosim.git@main"
 ## Linking in biosim-platform
 
 - Models can be linked with explicit paths:
-  - `models/generegulation-sbml-hoffmann2002-knockout-ikbnfkb-signaling/model.yaml`
+  - `labs/generegulation-sbml-hoffmann2002-knockout-ikbnfkb-signaling/model/model.yaml`
 - Gene regulation models can be composed with signaling, metabolism, or development models for multi-scale simulations
 
 ## Validation & CI

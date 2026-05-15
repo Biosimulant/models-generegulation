@@ -1,0 +1,46 @@
+schema_version: '2.0'
+title: Aguilera2017 Constitutive Gene Expression Lab
+description: constitutive mRNA/protein expression. Model destription:The model describes
+  the stochastic dynamics of two variables, protein and mRNA of a gene with constitutive
+  expression. Publication:A New Efficient Approach to Fit Stochastic Models o.
+models:
+- alias: aguilera2017_constitutive_gene_expression
+  path: models/core
+  parameters:
+    model_path: data/MODEL1608100000.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: aguilera2017_constitutive_gene_expression.messenger_rna
+  to:
+  - visualisation.aguilera2017_constitutive_gene_expression_messenger_rna
+- from: aguilera2017_constitutive_gene_expression.protein
+  to:
+  - visualisation.aguilera2017_constitutive_gene_expression_protein
+- from: aguilera2017_constitutive_gene_expression.state
+  to:
+  - visualisation.aguilera2017_constitutive_gene_expression_state
+- from: aguilera2017_constitutive_gene_expression.summary
+  to:
+  - visualisation.aguilera2017_constitutive_gene_expression_summary
+- from: aguilera2017_constitutive_gene_expression.species_labels
+  to:
+  - visualisation.aguilera2017_constitutive_gene_expression_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: messenger_rna
+    maps_to: aguilera2017_constitutive_gene_expression.messenger_rna
+  - name: protein
+    maps_to: aguilera2017_constitutive_gene_expression.protein
+  - name: state
+    maps_to: aguilera2017_constitutive_gene_expression.state
+  - name: summary
+    maps_to: aguilera2017_constitutive_gene_expression.summary
+  - name: species_labels
+    maps_to: aguilera2017_constitutive_gene_expression.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

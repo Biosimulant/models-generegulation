@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Konrath2020 P53 Signaling Lab
+description: p53 subpopulation signaling. The ODE model is based on Batchelor et al.,
+  Mol. It can be used to explore generegulation konrath2020 p53 signaling model2004300002
+  dynamics and compare simulation behavior across conditions.
+models:
+- alias: konrath2020_p53_signaling
+  path: models/core
+  parameters:
+    model_path: data/MODEL2004300002.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: konrath2020_p53_signaling.p53
+  to:
+  - visualisation.konrath2020_p53_signaling_p53
+- from: konrath2020_p53_signaling.active_p53
+  to:
+  - visualisation.konrath2020_p53_signaling_active_p53
+- from: konrath2020_p53_signaling.mdm2
+  to:
+  - visualisation.konrath2020_p53_signaling_mdm2
+- from: konrath2020_p53_signaling.phosphorylated_atm
+  to:
+  - visualisation.konrath2020_p53_signaling_phosphorylated_atm
+- from: konrath2020_p53_signaling.state
+  to:
+  - visualisation.konrath2020_p53_signaling_state
+- from: konrath2020_p53_signaling.summary
+  to:
+  - visualisation.konrath2020_p53_signaling_summary
+- from: konrath2020_p53_signaling.species_labels
+  to:
+  - visualisation.konrath2020_p53_signaling_species_labels
+io:
+  inputs:
+  - name: dna_damage_signal
+    maps_to: konrath2020_p53_signaling.dna_damage_signal
+    label: DNA damage signal
+    description: Source parameter `damage`, used as the DNA-damage stimulus in the
+      p53 signaling model.
+  outputs:
+  - name: p53
+    maps_to: konrath2020_p53_signaling.p53
+  - name: active_p53
+    maps_to: konrath2020_p53_signaling.active_p53
+  - name: mdm2
+    maps_to: konrath2020_p53_signaling.mdm2
+  - name: phosphorylated_atm
+    maps_to: konrath2020_p53_signaling.phosphorylated_atm
+  - name: state
+    maps_to: konrath2020_p53_signaling.state
+  - name: summary
+    maps_to: konrath2020_p53_signaling.summary
+  - name: species_labels
+    maps_to: konrath2020_p53_signaling.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

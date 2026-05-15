@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Ashall2009 Nfkb Transcription Lab
+description: NF-kB dependent transcription. Model taken from Ashall et al., Science,
+  2009 (http://www.sciencemag.org/content/324/5924/242.long). It can be used to explore
+  generegulation ashall2009 nfkappab dependent transcription model1509020000 dynamics
+  and compare simulation behavior across conditions.
+models:
+- alias: ashall2009_nfkb_transcription
+  path: models/core
+  parameters:
+    model_path: data/MODEL1509020000.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: ashall2009_nfkb_transcription.nuclear_nfkb
+  to:
+  - visualisation.ashall2009_nfkb_transcription_nuclear_nfkb
+- from: ashall2009_nfkb_transcription.nfkb
+  to:
+  - visualisation.ashall2009_nfkb_transcription_nfkb
+- from: ashall2009_nfkb_transcription.ikba_transcript
+  to:
+  - visualisation.ashall2009_nfkb_transcription_ikba_transcript
+- from: ashall2009_nfkb_transcription.a20_transcript
+  to:
+  - visualisation.ashall2009_nfkb_transcription_a20_transcript
+- from: ashall2009_nfkb_transcription.state
+  to:
+  - visualisation.ashall2009_nfkb_transcription_state
+- from: ashall2009_nfkb_transcription.summary
+  to:
+  - visualisation.ashall2009_nfkb_transcription_summary
+- from: ashall2009_nfkb_transcription.species_labels
+  to:
+  - visualisation.ashall2009_nfkb_transcription_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: nuclear_nfkb
+    maps_to: ashall2009_nfkb_transcription.nuclear_nfkb
+  - name: nfkb
+    maps_to: ashall2009_nfkb_transcription.nfkb
+  - name: ikba_transcript
+    maps_to: ashall2009_nfkb_transcription.ikba_transcript
+  - name: a20_transcript
+    maps_to: ashall2009_nfkb_transcription.a20_transcript
+  - name: state
+    maps_to: ashall2009_nfkb_transcription.state
+  - name: summary
+    maps_to: ashall2009_nfkb_transcription.summary
+  - name: species_labels
+    maps_to: ashall2009_nfkb_transcription.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

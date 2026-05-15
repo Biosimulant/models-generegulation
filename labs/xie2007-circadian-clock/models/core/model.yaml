@@ -1,0 +1,62 @@
+schema_version: '2.0'
+title: Xie2007_CircClock
+description: The model reproduces the oscillations for mRNA and protein species as
+  depicted in Fig 3 of the plot. The model differs slightly from that given in the
+  paper and this was made after a communication fro.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Z Xie
+- Kulasiri D
+upstream:
+  id: biomodels_ebi:BIOMD0000000160
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000160
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000160
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000160?filename=BIOMD0000000160_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.xie2007_circclock_biomd0000000160_model:Xie2007CircclockBiomd0000000160Model
+  init_kwargs:
+    model_path: data/BIOMD0000000160.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: period_protein
+    maps_to: PER
+    label: PER
+    description: PER observable. Maps to SBML symbol `PER`.
+  - name: timeless_protein
+    maps_to: TIM
+    label: TIM
+    description: TIM observable. Maps to SBML symbol `TIM`.
+  - name: clock_protein
+    maps_to: CLK
+    label: CLK
+    description: CLK observable. Maps to SBML symbol `CLK`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

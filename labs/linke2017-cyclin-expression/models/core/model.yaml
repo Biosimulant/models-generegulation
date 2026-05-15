@@ -1,0 +1,70 @@
+schema_version: '2.0'
+title: Linke2017 - Synchronization of Cyclins' expression by the Fkh2 transcription
+  factor in the budding yeast cell cycle
+description: Modeling of the expression of cyclin B2 and B3 in the budding yeast cell
+  cycle. It can be used to explore generegulation linke2017 synchronization of cyclins
+  expression dynamics and compare simulation behavior across conditions.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Christian Linke
+- Anastasia Chasapi
+- "Alberto Gonz\xE1lez-Novo"
+- Istabrak Al Sawad
+- Silvia Tognetti
+upstream:
+  id: biomodels_ebi:BIOMD0000000934
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000934
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000934
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000934?filename=Linke2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.linke2017_synchronization_of_cyclins_expression_biomd0000000934_model:Linke2017SynchronizationOfCyclinsExpressionBiomd0000000934Model
+  init_kwargs:
+    model_path: data/BIOMD0000000934.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: sic1
+    maps_to: Sic1
+    label: Sic1
+    description: Sic1 observable. Maps to SBML symbol `Sic1`.
+  - name: cdk1_clb5_or_clb6
+    maps_to: Cdk1_Clb5or6
+    label: Cdk1 Clb5or6
+    description: Cdk1 Clb5or6 observable. Maps to SBML symbol `Cdk1_Clb5or6`.
+  - name: cdk1_clb3_or_clb4
+    maps_to: Cdk1_Clb3or4
+    label: Cdk1 Clb3or4
+    description: Cdk1 Clb3or4 observable. Maps to SBML symbol `Cdk1_Clb3or4`.
+  - name: cdk1_clb1_or_clb2
+    maps_to: Cdk1_Clb1or2
+    label: Cdk1 Clb1or2
+    description: Cdk1 Clb1or2 observable. Maps to SBML symbol `Cdk1_Clb1or2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

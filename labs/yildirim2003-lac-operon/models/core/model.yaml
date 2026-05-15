@@ -1,0 +1,77 @@
+schema_version: '2.0'
+title: Yildirim2003_Lac_Operon
+description: 'This a model from the article: Feedback regulation in the lactose operon:
+  a mathematical modeling study and comparison with experimental data. It can be used
+  to explore generegulation yildirim2003 lac operon BioModels0000000065 dynamics and
+  compare simulation behavior across conditions.'
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Necmettin Yildirim
+- Michael C Mackey
+upstream:
+  id: biomodels_ebi:BIOMD0000000065
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000065
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000065
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000065?filename=BIOMD0000000065_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.yildirim2003_lac_operon_biomd0000000065_model:Yildirim2003LacOperonBiomd0000000065Model
+  init_kwargs:
+    model_path: data/BIOMD0000000065.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+- name: external_lactose
+  value: 0.08
+  units: native SBML value
+  description: Boundary species `L_e` (`External_Lactose`), the source extracellular
+    lactose level.
+io:
+  inputs:
+  - name: external_lactose
+    maps_to: L_e
+    label: External lactose
+    description: Boundary species `L_e` (`External_Lactose`), the source extracellular
+      lactose level.
+  outputs:
+  - name: lac_messenger_rna
+    maps_to: M
+    label: mRNA
+    description: mRNA observable. Maps to SBML symbol `M`.
+  - name: beta_galactosidase
+    maps_to: B
+    label: Betagalactosidase
+    description: Betagalactosidase observable. Maps to SBML symbol `B`.
+  - name: allolactose
+    maps_to: A
+    label: allolactose
+    description: allolactose observable. Maps to SBML symbol `A`.
+  - name: permease
+    maps_to: P
+    label: permease
+    description: permease observable. Maps to SBML symbol `P`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

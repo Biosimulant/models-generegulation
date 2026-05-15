@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Hoffmann2002_KnockOut_IkBNFkB_Signaling
+description: The model corresponds to the knock out model of beta-/-, epsilon -/-
+  and reproduces the upper panel in Fig 2C. In order to reproduce the other knock
+  out models the transcription rate of the species th.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Alexander Hoffmann
+- Andre Levchenko
+- Martin L Scott
+- David Baltimore
+upstream:
+  id: biomodels_ebi:BIOMD0000000139
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000139
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000139
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000139?filename=BIOMD0000000139_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.hoffmann2002_knockout_ikbnfkb_signaling_biomd0000000139_model:Hoffmann2002KnockoutIkbnfkbSignalingBiomd0000000139Model
+  init_kwargs:
+    model_path: data/BIOMD0000000139.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: nfkb
+    maps_to: NFkB
+    label: NF-kB
+    description: NF-kB observable. Maps to SBML symbol `NFkB`.
+  - name: ikb_alpha
+    maps_to: IkBalpha
+    label: IkBalpha
+    description: IkBalpha observable. Maps to SBML symbol `IkBalpha`.
+  - name: ikk
+    maps_to: IKK
+    label: IKK
+    description: IKK observable. Maps to SBML symbol `IKK`.
+  - name: ikb_alpha_nfkb_complex
+    maps_to: IkBalpha_NFkB
+    label: IkBalpha NF-kB
+    description: IkBalpha NF-kB observable. Maps to SBML symbol `IkBalpha_NFkB`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

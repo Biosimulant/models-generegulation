@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Aguilera2017 Irf7 Circuit Lab
+description: murine IRF7/IFN gene circuit. Model destription:The model describes the
+  dynamics of murine IRF7 gene expression upon IFN stimulation. The present model
+  comprises known key components and feedback mechanisms.
+models:
+- alias: aguilera2017_irf7_circuit
+  path: models/core
+  parameters:
+    model_path: data/MODEL1608100001.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: aguilera2017_irf7_circuit.irf7
+  to:
+  - visualisation.aguilera2017_irf7_circuit_irf7
+- from: aguilera2017_irf7_circuit.phosphorylated_irf7
+  to:
+  - visualisation.aguilera2017_irf7_circuit_phosphorylated_irf7
+- from: aguilera2017_irf7_circuit.irf7_dimer
+  to:
+  - visualisation.aguilera2017_irf7_circuit_irf7_dimer
+- from: aguilera2017_irf7_circuit.interferon
+  to:
+  - visualisation.aguilera2017_irf7_circuit_interferon
+- from: aguilera2017_irf7_circuit.state
+  to:
+  - visualisation.aguilera2017_irf7_circuit_state
+- from: aguilera2017_irf7_circuit.summary
+  to:
+  - visualisation.aguilera2017_irf7_circuit_summary
+- from: aguilera2017_irf7_circuit.species_labels
+  to:
+  - visualisation.aguilera2017_irf7_circuit_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: irf7
+    maps_to: aguilera2017_irf7_circuit.irf7
+  - name: phosphorylated_irf7
+    maps_to: aguilera2017_irf7_circuit.phosphorylated_irf7
+  - name: irf7_dimer
+    maps_to: aguilera2017_irf7_circuit.irf7_dimer
+  - name: interferon
+    maps_to: aguilera2017_irf7_circuit.interferon
+  - name: state
+    maps_to: aguilera2017_irf7_circuit.state
+  - name: summary
+    maps_to: aguilera2017_irf7_circuit.summary
+  - name: species_labels
+    maps_to: aguilera2017_irf7_circuit.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Liebal2012 Sigb Transcription Inhibition Lab
+description: B. subtilis sigma-B transcription inhibition. Liebal2012 - B.subtilis
+  transcription inhibition model An important transcription factor of B.subsilis is
+  sigma B . It can be used to explore generegulation liebal2012 b subtilis transcription
+  inhibition dynamics and compare simulation behavior across conditions.
+models:
+- alias: liebal2012_sigb_transcription_inhibition
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000461.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: liebal2012_sigb_transcription_inhibition.sigma_b
+  to:
+  - visualisation.liebal2012_sigb_transcription_inhibition_sigma_b
+- from: liebal2012_sigb_transcription_inhibition.lacz_reporter
+  to:
+  - visualisation.liebal2012_sigb_transcription_inhibition_lacz_reporter
+- from: liebal2012_sigb_transcription_inhibition.model_state_x
+  to:
+  - visualisation.liebal2012_sigb_transcription_inhibition_model_state_x
+- from: liebal2012_sigb_transcription_inhibition.state
+  to:
+  - visualisation.liebal2012_sigb_transcription_inhibition_state
+- from: liebal2012_sigb_transcription_inhibition.summary
+  to:
+  - visualisation.liebal2012_sigb_transcription_inhibition_summary
+- from: liebal2012_sigb_transcription_inhibition.species_labels
+  to:
+  - visualisation.liebal2012_sigb_transcription_inhibition_species_labels
+io:
+  inputs:
+  - name: iptg
+    maps_to: liebal2012_sigb_transcription_inhibition.iptg
+    label: IPTG
+    description: Boundary species `IPTG`, the source induction level for this sigma-B
+      model variant.
+  outputs:
+  - name: sigma_b
+    maps_to: liebal2012_sigb_transcription_inhibition.sigma_b
+  - name: lacz_reporter
+    maps_to: liebal2012_sigb_transcription_inhibition.lacz_reporter
+  - name: model_state_x
+    maps_to: liebal2012_sigb_transcription_inhibition.model_state_x
+  - name: state
+    maps_to: liebal2012_sigb_transcription_inhibition.state
+  - name: summary
+    maps_to: liebal2012_sigb_transcription_inhibition.summary
+  - name: species_labels
+    maps_to: liebal2012_sigb_transcription_inhibition.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

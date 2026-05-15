@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Aguilera2017 - Model for IRF7 circuit
+description: Model destription:The model describes the dynamics of murine IRF7 gene
+  expression upon IFN stimulation. The present model comprises known key components
+  and feedback mechanisms.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Aguilera
+- Luis U.
+- Christoph Zimmer
+- and Ursula Kummer
+upstream:
+  id: biomodels_ebi:MODEL1608100001
+  source_db: biomodels_ebi
+  source_id: MODEL1608100001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1608100001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1608100001?filename=MODEL1608100001_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.aguilera2017_model_for_irf7_circuit_model1608100001_model:Aguilera2017ModelForIrf7CircuitModel1608100001Model
+  init_kwargs:
+    model_path: data/MODEL1608100001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: irf7
+    maps_to: IRF7
+    label: IRF7
+    description: IRF7 observable. Maps to SBML symbol `IRF7`.
+  - name: phosphorylated_irf7
+    maps_to: IRF7phosp
+    label: IRF7phosp
+    description: IRF7phosp observable. Maps to SBML symbol `IRF7phosp`.
+  - name: irf7_dimer
+    maps_to: IRF7dimer
+    label: IRF7dimer
+    description: IRF7dimer observable. Maps to SBML symbol `IRF7dimer`.
+  - name: interferon
+    maps_to: IFN
+    label: IFN
+    description: IFN observable. Maps to SBML symbol `IFN`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

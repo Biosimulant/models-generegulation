@@ -1,0 +1,45 @@
+schema_version: '2.0'
+title: Aguilera2017 - Model for gene constitutive expression circuit Visualisation
+description: Dedicated presentation model for constitutive mRNA/protein expression.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Aguilera2017 Constitutive Gene Expression Lab
+    question: Does constitutive expression reach a stable mRNA/protein regime?
+    answer_focus: mRNA/protein trajectories and final expression balance
+    caveat: SBML stochastic-origin model run deterministically by Tellurium.
+    alias: aguilera2017_constitutive_gene_expression
+    observables:
+    - id: mRNA
+      port: messenger_rna
+      label: mRNA
+    - id: Protein
+      port: protein
+      label: Protein
+    state_observables:
+    - mRNA
+    - Protein
+    species_label_ids:
+    - mRNA
+    - Protein
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

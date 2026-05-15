@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Rantasalo2016 - Synthetic expresion modulator induced STF_VP16 Visualisation
+description: Dedicated presentation model for induced synthetic expression modulator.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Rantasalo2016 Induced Stf Vp16 Lab
+    question: Does induction activate VP16 reporter expression?
+    answer_focus: induced expression response
+    caveat: Inducer input is not exposed unless the source symbol is clear.
+    alias: rantasalo2016_induced_stf_vp16
+    observables:
+    - id: MmCherryc
+      port: mcherry_messenger_rna
+      label: MmCherryc
+    - id: mCherryc
+      port: mcherry_reporter
+      label: mCherryc
+    - id: TFc
+      port: cytosolic_transcription_factor
+      label: TFc
+    - id: MetTF
+      port: met_transcription_factor
+      label: MetTF
+    state_observables:
+    - MmCherryc
+    - mCherryc
+    - TFc
+    - MTFc
+    - Pol
+    - TFn_B
+    - CP
+    - Pol_TFn_B
+    - TFn
+    - Pol_DTF
+    - MetTF_BTF
+    - MetTF
+    - Met
+    - DTF
+    - BTF
+    - B
+    - Met_MetTF
+    - Pol_TFn_B_CP2
+    species_label_ids:
+    - MmCherryc
+    - mCherryc
+    - TFc
+    - MTFc
+    - Pol
+    - TFn_B
+    - CP
+    - Pol_TFn_B
+    - TFn
+    - Pol_DTF
+    - MetTF_BTF
+    - MetTF
+    - Met
+    - DTF
+    - BTF
+    - B
+    - Met_MetTF
+    - Pol_TFn_B_CP2
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: Zeilinger2006_PRR7-PRR9light-Yprime Visualisation
+description: Dedicated presentation model for plant light/circadian clock.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Zeilinger2006 Prr7 Prr9 Light Clock Lab
+    question: Does the light-cycle model reproduce clock gene dynamics?
+    answer_focus: light-driven circadian response
+    caveat: No time-varying light input is invented by the wrapper.
+    alias: zeilinger2006_prr7_prr9_light_clock
+    observables:
+    - id: cTm
+      port: toc1_messenger_rna
+      label: cTm
+    - id: cYn
+      port: nuclear_y
+      label: cYn
+    - id: cP7m
+      port: prr7_messenger_rna
+      label: cP7m
+    - id: cP9m
+      port: prr9_messenger_rna
+      label: cP9m
+    state_observables:
+    - cLc
+    - cLm
+    - cLn
+    - cP7c
+    - cP7m
+    - cP7n
+    - cP9c
+    - cP9m
+    - cP9n
+    - cPn
+    - cTc
+    - cTm
+    - cTn
+    - cXc
+    - cXm
+    - cXn
+    - cYc
+    - cYm
+    - cYn
+    species_label_ids:
+    - cLc
+    - cLm
+    - cLn
+    - cP7c
+    - cP7m
+    - cP7n
+    - cP9c
+    - cP9m
+    - cP9n
+    - cPn
+    - cTc
+    - cTm
+    - cTn
+    - cXc
+    - cXm
+    - cXn
+    - cYc
+    - cYm
+    - cYn
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

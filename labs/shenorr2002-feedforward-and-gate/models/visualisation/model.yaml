@@ -1,0 +1,46 @@
+schema_version: '2.0'
+title: Shen-Orr2002_FeedForward_AND_gate Visualisation
+description: Dedicated presentation model for coherent feed-forward loop.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Shenorr2002 Feedforward And Gate Lab
+    question: Does the AND-gate feed-forward loop filter activation?
+    answer_focus: feed-forward delay/filter behavior
+    caveat: Input X is exposed because it is a source boundary species; labels stay
+      tied to source symbols.
+    alias: shenorr2002_feedforward_and_gate
+    observables:
+    - id: Y
+      port: intermediate_regulator_y
+      label: Y
+    - id: Z
+      port: response_operon_z
+      label: Z
+    state_observables:
+    - Y
+    - Z
+    species_label_ids:
+    - Y
+    - Z
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

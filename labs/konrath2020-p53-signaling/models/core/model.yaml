@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Konrath2020_p53_signaling_model
+description: The ODE model is based on Batchelor et al., Mol. It can be used to explore
+  generegulation konrath2020 p53 signaling model2004300002 dynamics and compare simulation
+  behavior across conditions.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Fabian Konrath
+- Anna Mittermeier
+- Elena Cristiano
+- Jana Wolf
+- Alexander Loewer
+upstream:
+  id: biomodels_ebi:MODEL2004300002
+  source_db: biomodels_ebi
+  source_id: MODEL2004300002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2004300002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2004300002?filename=Konrath2020_p53_subpopulation_a_l2v4.xml
+  license: CC0
+biosim:
+  entrypoint: src.konrath2020_p53_signaling_model_model2004300002_model:Konrath2020P53SignalingModelModel2004300002Model
+  init_kwargs:
+    model_path: data/MODEL2004300002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+- name: dna_damage_signal
+  value: 1.0
+  units: native SBML value
+  description: Source parameter `damage`, used as the DNA-damage stimulus in the p53
+    signaling model.
+io:
+  inputs:
+  - name: dna_damage_signal
+    maps_to: damage
+    label: DNA damage signal
+    description: Source parameter `damage`, used as the DNA-damage stimulus in the
+      p53 signaling model.
+  outputs:
+  - name: p53
+    maps_to: p53
+    label: p53
+    description: p53 observable. Maps to SBML symbol `p53`.
+  - name: active_p53
+    maps_to: p53a
+    label: p53a
+    description: p53a observable. Maps to SBML symbol `p53a`.
+  - name: mdm2
+    maps_to: Mdm2
+    label: Mdm2
+    description: Mdm2 observable. Maps to SBML symbol `Mdm2`.
+  - name: phosphorylated_atm
+    maps_to: pATM
+    label: ATM P
+    description: ATM P observable. Maps to SBML symbol `pATM`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Dudziuk2019 Hsp70 Heat Induction Lab
+description: Hsp70 heat-shock induction. This is a mathematical model of Hsp70 induction.
+  To model heat shock effects, the model incorporates temperature dependencies in
+  transcirption to Hsp70 mRNA and in dissociation of transcriptional comp.
+models:
+- alias: dudziuk2019_hsp70_heat_induction
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000843.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: dudziuk2019_hsp70_heat_induction.heat_shock_protein
+  to:
+  - visualisation.dudziuk2019_hsp70_heat_induction_heat_shock_protein
+- from: dudziuk2019_hsp70_heat_induction.heat_shock_factor
+  to:
+  - visualisation.dudziuk2019_hsp70_heat_induction_heat_shock_factor
+- from: dudziuk2019_hsp70_heat_induction.hsp70_messenger_rna
+  to:
+  - visualisation.dudziuk2019_hsp70_heat_induction_hsp70_messenger_rna
+- from: dudziuk2019_hsp70_heat_induction.protein_product
+  to:
+  - visualisation.dudziuk2019_hsp70_heat_induction_protein_product
+- from: dudziuk2019_hsp70_heat_induction.state
+  to:
+  - visualisation.dudziuk2019_hsp70_heat_induction_state
+- from: dudziuk2019_hsp70_heat_induction.summary
+  to:
+  - visualisation.dudziuk2019_hsp70_heat_induction_summary
+- from: dudziuk2019_hsp70_heat_induction.species_labels
+  to:
+  - visualisation.dudziuk2019_hsp70_heat_induction_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: heat_shock_protein
+    maps_to: dudziuk2019_hsp70_heat_induction.heat_shock_protein
+  - name: heat_shock_factor
+    maps_to: dudziuk2019_hsp70_heat_induction.heat_shock_factor
+  - name: hsp70_messenger_rna
+    maps_to: dudziuk2019_hsp70_heat_induction.hsp70_messenger_rna
+  - name: protein_product
+    maps_to: dudziuk2019_hsp70_heat_induction.protein_product
+  - name: state
+    maps_to: dudziuk2019_hsp70_heat_induction.state
+  - name: summary
+    maps_to: dudziuk2019_hsp70_heat_induction.summary
+  - name: species_labels
+    maps_to: dudziuk2019_hsp70_heat_induction.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

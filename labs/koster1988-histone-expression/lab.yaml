@@ -1,0 +1,47 @@
+schema_version: '2.0'
+title: Koster1988 Histone Expression Lab
+description: 'Xenopus histone expression kinetics. This model is described in the
+  article: Kinetics of histone gene expression during early development of Xenopus
+  laevis. It can be used to explore generegulation koster1988 histone expression model5954483266
+  dynamics and compare simulation behavior across conditions.'
+models:
+- alias: koster1988_histone_expression
+  path: models/core
+  parameters:
+    model_path: data/MODEL5954483266.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: koster1988_histone_expression.histone_rna
+  to:
+  - visualisation.koster1988_histone_expression_histone_rna
+- from: koster1988_histone_expression.histone_protein
+  to:
+  - visualisation.koster1988_histone_expression_histone_protein
+- from: koster1988_histone_expression.state
+  to:
+  - visualisation.koster1988_histone_expression_state
+- from: koster1988_histone_expression.summary
+  to:
+  - visualisation.koster1988_histone_expression_summary
+- from: koster1988_histone_expression.species_labels
+  to:
+  - visualisation.koster1988_histone_expression_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: histone_rna
+    maps_to: koster1988_histone_expression.histone_rna
+  - name: histone_protein
+    maps_to: koster1988_histone_expression.histone_protein
+  - name: state
+    maps_to: koster1988_histone_expression.state
+  - name: summary
+    maps_to: koster1988_histone_expression.summary
+  - name: species_labels
+    maps_to: koster1988_histone_expression.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

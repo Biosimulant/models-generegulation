@@ -1,0 +1,107 @@
+schema_version: '2.0'
+title: You2010_General_Yeast_mRNA_Translation Visualisation
+description: Dedicated presentation model for yeast mRNA translation.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: You2010 Yeast Translation Lab
+    question: Which yeast translation species dominate the trajectory?
+    answer_focus: translation pool dynamics
+    caveat: Headline outputs are curated from the full SBML state.
+    alias: you2010_yeast_translation
+    observables:
+    - id: eIF2GDP
+      port: eif2_gdp
+      label: eIF2 GDP
+    - id: eIF2B
+      port: eif2b
+      label: eIF2B
+    - id: _43S
+      port: initiation_complex_43s
+      label: 43S
+    - id: RibosomemRNA
+      port: ribosome_mrna_complex
+      label: Ribosome mRNA
+    state_observables:
+    - His_vac
+    - His_cyt
+    - Hts1
+    - HisAMPHts1
+    - tRNA_His
+    - HistRNA_His
+    - Gcn2
+    - Gcn2P
+    - eIF2GDP
+    - eIF2PGDP
+    - eIF2B
+    - eIF2BeIF2GDP
+    - eIF2BeIF2PGDP
+    - eIF2GTP
+    - TC
+    - eIF1
+    - eIF3
+    - eIF5
+    - TCeIF5
+    - eIF5eIF2GDP
+    - eIF1eIF3
+    - eIF3eIF5
+    - eIF1eIF3eIF5
+    - TCeIF5eIF3
+    - MFC
+    - MFCeIF5
+    - _40S
+    - _43S
+    - _40SmRNA
+    - RibosomemRNA
+    species_label_ids:
+    - His_vac
+    - His_cyt
+    - Hts1
+    - HisAMPHts1
+    - tRNA_His
+    - HistRNA_His
+    - Gcn2
+    - Gcn2P
+    - eIF2GDP
+    - eIF2PGDP
+    - eIF2B
+    - eIF2BeIF2GDP
+    - eIF2BeIF2PGDP
+    - eIF2GTP
+    - TC
+    - eIF1
+    - eIF3
+    - eIF5
+    - TCeIF5
+    - eIF5eIF2GDP
+    - eIF1eIF3
+    - eIF3eIF5
+    - eIF1eIF3eIF5
+    - TCeIF5eIF3
+    - MFC
+    - MFCeIF5
+    - _40S
+    - _43S
+    - _40SmRNA
+    - RibosomemRNA
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

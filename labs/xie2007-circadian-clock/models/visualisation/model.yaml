@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Xie2007_CircClock Visualisation
+description: Dedicated presentation model for circadian mRNA/protein clock.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Xie2007 Circadian Clock Lab
+    question: Does the clock model sustain mRNA/protein oscillation?
+    answer_focus: circadian oscillations
+    caveat: Use a longer runtime when evaluating full oscillation period evidence.
+    alias: xie2007_circadian_clock
+    observables:
+    - id: PER
+      port: period_protein
+      label: PER
+    - id: TIM
+      port: timeless_protein
+      label: TIM
+    - id: CLK
+      port: clock_protein
+      label: CLK
+    state_observables:
+    - CC
+    - CCPT
+    - clkp
+    - perp
+    - clkm
+    - perm
+    - PT
+    - vrip
+    - vrim
+    - VRI
+    - pdpp
+    - pdpm
+    - PDP
+    - CLK
+    - PER
+    - timp
+    - timm
+    - TIM
+    - prcper
+    - prcv
+    - prcpdp
+    - prvc
+    - prpc
+    - prct
+    species_label_ids:
+    - CC
+    - CCPT
+    - clkp
+    - perp
+    - clkm
+    - perm
+    - PT
+    - vrip
+    - vrim
+    - VRI
+    - pdpp
+    - pdpm
+    - PDP
+    - CLK
+    - PER
+    - timp
+    - timm
+    - TIM
+    - prcper
+    - prcv
+    - prcpdp
+    - prvc
+    - prpc
+    - prct
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Shimoni2009 - Escherichia Coli SOS Visualisation
+description: Dedicated presentation model for E. coli SOS DNA-damage circuit.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Shimoni2009 Ecoli Sos Response Lab
+    question: Does the SOS circuit activate after DNA-damage signaling?
+    answer_focus: SOS activation dynamics
+    caveat: Standard SOS abbreviations are explained in descriptions.
+    alias: shimoni2009_ecoli_sos_response
+    observables:
+    - id: LexA
+      port: lexa
+      label: LexA
+    - id: RecA
+      port: reca
+      label: RecA
+    - id: mLexA
+      port: lexa_messenger_rna
+      label: mLexA
+    - id: mRecA
+      port: reca_messenger_rna
+      label: mRecA
+    state_observables:
+    - bLexA
+    - mLexA
+    - LexA
+    - bRecA
+    - mRecA
+    - RecA
+    - bLexA
+    - mLexA
+    - LexA
+    - bRecA
+    - mRecA
+    - RecA
+    species_label_ids:
+    - bLexA
+    - mLexA
+    - LexA
+    - bRecA
+    - mRecA
+    - RecA
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

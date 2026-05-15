@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Hoffmann2002 Nfkb Ikb Knockout Lab
+description: NF-kB/IkB knockout signaling. The model corresponds to the knock out
+  model of beta-/-, epsilon -/- and reproduces the upper panel in Fig 2C. In order
+  to reproduce the other knock out models the transcription rate of the species th.
+models:
+- alias: hoffmann2002_nfkb_ikb_knockout
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000139.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: hoffmann2002_nfkb_ikb_knockout.nfkb
+  to:
+  - visualisation.hoffmann2002_nfkb_ikb_knockout_nfkb
+- from: hoffmann2002_nfkb_ikb_knockout.ikb_alpha
+  to:
+  - visualisation.hoffmann2002_nfkb_ikb_knockout_ikb_alpha
+- from: hoffmann2002_nfkb_ikb_knockout.ikk
+  to:
+  - visualisation.hoffmann2002_nfkb_ikb_knockout_ikk
+- from: hoffmann2002_nfkb_ikb_knockout.ikb_alpha_nfkb_complex
+  to:
+  - visualisation.hoffmann2002_nfkb_ikb_knockout_ikb_alpha_nfkb_complex
+- from: hoffmann2002_nfkb_ikb_knockout.state
+  to:
+  - visualisation.hoffmann2002_nfkb_ikb_knockout_state
+- from: hoffmann2002_nfkb_ikb_knockout.summary
+  to:
+  - visualisation.hoffmann2002_nfkb_ikb_knockout_summary
+- from: hoffmann2002_nfkb_ikb_knockout.species_labels
+  to:
+  - visualisation.hoffmann2002_nfkb_ikb_knockout_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: nfkb
+    maps_to: hoffmann2002_nfkb_ikb_knockout.nfkb
+  - name: ikb_alpha
+    maps_to: hoffmann2002_nfkb_ikb_knockout.ikb_alpha
+  - name: ikk
+    maps_to: hoffmann2002_nfkb_ikb_knockout.ikk
+  - name: ikb_alpha_nfkb_complex
+    maps_to: hoffmann2002_nfkb_ikb_knockout.ikb_alpha_nfkb_complex
+  - name: state
+    maps_to: hoffmann2002_nfkb_ikb_knockout.state
+  - name: summary
+    maps_to: hoffmann2002_nfkb_ikb_knockout.summary
+  - name: species_labels
+    maps_to: hoffmann2002_nfkb_ikb_knockout.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

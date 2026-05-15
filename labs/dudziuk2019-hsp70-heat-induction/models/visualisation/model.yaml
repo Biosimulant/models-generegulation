@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Dudziuk2019 - Biologically sound formal model of Hsp70 heat induction Visualisation
+description: Dedicated presentation model for Hsp70 heat-shock induction.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Dudziuk2019 Hsp70 Heat Induction Lab
+    question: Does heat-shock regulation induce Hsp70 response?
+    answer_focus: heat-shock transcription/protein response
+    caveat: Temperature/stress parameters are not exposed without source-symbol validation.
+    alias: dudziuk2019_hsp70_heat_induction
+    observables:
+    - id: HSP
+      port: heat_shock_protein
+      label: HSP
+    - id: HSF
+      port: heat_shock_factor
+      label: HSF
+    - id: mRNA
+      port: hsp70_messenger_rna
+      label: mRNA
+    - id: P
+      port: protein_product
+      label: P
+    state_observables:
+    - HSP
+    - HSF
+    - S
+    - HSP_HSF
+    - HSP_S
+    - HSF_3
+    - HSE
+    - HSE_HSF_3
+    - P
+    - mRNA
+    species_label_ids:
+    - HSP
+    - HSF
+    - S
+    - HSP_HSF
+    - HSP_S
+    - HSF_3
+    - HSE
+    - HSE_HSF_3
+    - P
+    - mRNA
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

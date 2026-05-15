@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Zeilinger2006 Prr7 Prr9 Light Clock Lab
+description: plant light/circadian clock. The model reproduces the time profile of
+  TOC1 and Y mRNA for a 8:16 cycle as depicted in Fig7A and 7B. A simple algorithm
+  in the event section accomplishes the 8 hour light and 16 hour dark cycle.
+models:
+- alias: zeilinger2006_prr7_prr9_light_clock
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000097.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: zeilinger2006_prr7_prr9_light_clock.toc1_messenger_rna
+  to:
+  - visualisation.zeilinger2006_prr7_prr9_light_clock_toc1_messenger_rna
+- from: zeilinger2006_prr7_prr9_light_clock.nuclear_y
+  to:
+  - visualisation.zeilinger2006_prr7_prr9_light_clock_nuclear_y
+- from: zeilinger2006_prr7_prr9_light_clock.prr7_messenger_rna
+  to:
+  - visualisation.zeilinger2006_prr7_prr9_light_clock_prr7_messenger_rna
+- from: zeilinger2006_prr7_prr9_light_clock.prr9_messenger_rna
+  to:
+  - visualisation.zeilinger2006_prr7_prr9_light_clock_prr9_messenger_rna
+- from: zeilinger2006_prr7_prr9_light_clock.state
+  to:
+  - visualisation.zeilinger2006_prr7_prr9_light_clock_state
+- from: zeilinger2006_prr7_prr9_light_clock.summary
+  to:
+  - visualisation.zeilinger2006_prr7_prr9_light_clock_summary
+- from: zeilinger2006_prr7_prr9_light_clock.species_labels
+  to:
+  - visualisation.zeilinger2006_prr7_prr9_light_clock_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: toc1_messenger_rna
+    maps_to: zeilinger2006_prr7_prr9_light_clock.toc1_messenger_rna
+  - name: nuclear_y
+    maps_to: zeilinger2006_prr7_prr9_light_clock.nuclear_y
+  - name: prr7_messenger_rna
+    maps_to: zeilinger2006_prr7_prr9_light_clock.prr7_messenger_rna
+  - name: prr9_messenger_rna
+    maps_to: zeilinger2006_prr7_prr9_light_clock.prr9_messenger_rna
+  - name: state
+    maps_to: zeilinger2006_prr7_prr9_light_clock.state
+  - name: summary
+    maps_to: zeilinger2006_prr7_prr9_light_clock.summary
+  - name: species_labels
+    maps_to: zeilinger2006_prr7_prr9_light_clock.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

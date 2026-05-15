@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Liebal2012 Sigb Proteolysis Lab
+description: B. subtilis sigma-B proteolysis. Liebal2012 - B.subtilis sigB proteolysis
+  model An important transcription factor of B.subsilis is sigma B . It can be used
+  to explore generegulation liebal2012 b subtilis sigb proteolysis dynamics and compare
+  simulation behavior across conditions.
+models:
+- alias: liebal2012_sigb_proteolysis
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000460.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: liebal2012_sigb_proteolysis.sigma_b
+  to:
+  - visualisation.liebal2012_sigb_proteolysis_sigma_b
+- from: liebal2012_sigb_proteolysis.lacz_reporter
+  to:
+  - visualisation.liebal2012_sigb_proteolysis_lacz_reporter
+- from: liebal2012_sigb_proteolysis.model_state_x
+  to:
+  - visualisation.liebal2012_sigb_proteolysis_model_state_x
+- from: liebal2012_sigb_proteolysis.state
+  to:
+  - visualisation.liebal2012_sigb_proteolysis_state
+- from: liebal2012_sigb_proteolysis.summary
+  to:
+  - visualisation.liebal2012_sigb_proteolysis_summary
+- from: liebal2012_sigb_proteolysis.species_labels
+  to:
+  - visualisation.liebal2012_sigb_proteolysis_species_labels
+io:
+  inputs:
+  - name: iptg
+    maps_to: liebal2012_sigb_proteolysis.iptg
+    label: IPTG
+    description: Boundary species `IPTG`, the source induction level for this sigma-B
+      model variant.
+  outputs:
+  - name: sigma_b
+    maps_to: liebal2012_sigb_proteolysis.sigma_b
+  - name: lacz_reporter
+    maps_to: liebal2012_sigb_proteolysis.lacz_reporter
+  - name: model_state_x
+    maps_to: liebal2012_sigb_proteolysis.model_state_x
+  - name: state
+    maps_to: liebal2012_sigb_proteolysis.state
+  - name: summary
+    maps_to: liebal2012_sigb_proteolysis.summary
+  - name: species_labels
+    maps_to: liebal2012_sigb_proteolysis.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

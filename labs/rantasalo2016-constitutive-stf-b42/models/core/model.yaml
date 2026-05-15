@@ -1,0 +1,71 @@
+schema_version: '2.0'
+title: Rantasalo2016 - Synthetic expresion modulator constitutive STF_B42
+description: Rantasalo2015-Synthetic_expresion_modulator_constitutiveSTF_B42This model
+  is part of a family of models describing a modular synthetic expression system that
+  modulates the expression level of a gene i. It can be used to explore generegulation
+  rantasalo2016 synthetic expresion modulator cons dynamics and compare simulation
+  behavior across conditions.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Anssi Rantasalo
+- Elena Czeizler
+- Riitta Virtanen
+- Juho Rousu
+- "Harri L\xE4hdesm\xE4ki"
+upstream:
+  id: biomodels_ebi:MODEL1510230002
+  source_db: biomodels_ebi
+  source_id: MODEL1510230002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1510230002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1510230002?filename=MODEL1510230002_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.rantasalo2016_synthetic_expresion_modulator_cons_model1510230002_model:Rantasalo2016SyntheticExpresionModulatorConsModel1510230002Model
+  init_kwargs:
+    model_path: data/MODEL1510230002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: mcherry_messenger_rna
+    maps_to: MmCherryc
+    label: MmCherryc
+    description: MmCherryc observable. Maps to SBML symbol `MmCherryc`.
+  - name: mcherry_reporter
+    maps_to: mCherryc
+    label: mCherryc
+    description: mCherryc observable. Maps to SBML symbol `mCherryc`.
+  - name: cytosolic_transcription_factor
+    maps_to: TFc
+    label: TFc
+    description: TFc observable. Maps to SBML symbol `TFc`.
+  - name: nuclear_transcription_factor
+    maps_to: TFn
+    label: TFn
+    description: TFn observable. Maps to SBML symbol `TFn`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

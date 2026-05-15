@@ -1,0 +1,70 @@
+schema_version: '2.0'
+title: Grunwald2008 - Gene regulation of the Duchenne muscular dystrophy (Petri-net
+  model)
+description: Gene Regulation Grunwald2008Gene Regulation Of The Duchenne Mus Model1403120000Model
+  models core biological dynamics as a OTHER simulation curated from biomodels_ebi
+  (biomodels_ebi:MODEL1403120000), focused on. When you run it, you can track state
+  over time and compare response patterns across parameter settings.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Stefanie Grunwald
+- Astrid Speer
+- "J\xF6rg Ackermann"
+- Koch I
+upstream:
+  id: biomodels_ebi:MODEL1403120000
+  source_db: biomodels_ebi
+  source_id: MODEL1403120000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1403120000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1403120000?filename=MODEL1403120000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.grunwald2008_gene_regulation_of_the_duchenne_mus_model1403120000_model:Grunwald2008GeneRegulationOfTheDuchenneMusModel1403120000Model
+  init_kwargs:
+    model_path: data/MODEL1403120000.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: calcium_pool
+    maps_to: P5
+    label: Ca
+    description: Ca observable. Maps to SBML symbol `P5`.
+  - name: nfatc
+    maps_to: P10
+    label: NFATc
+    description: NFATc observable. Maps to SBML symbol `P10`.
+  - name: anf_expression
+    maps_to: P21
+    label: ANF
+    description: ANF observable. Maps to SBML symbol `P21`.
+  - name: alpha_actin
+    maps_to: P20
+    label: aActin
+    description: aActin observable. Maps to SBML symbol `P20`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

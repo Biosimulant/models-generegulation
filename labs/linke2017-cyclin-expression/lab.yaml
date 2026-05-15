@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Linke2017 Cyclin Expression Lab
+description: yeast cyclin B2/B3 expression. Modeling of the expression of cyclin B2
+  and B3 in the budding yeast cell cycle. It can be used to explore generegulation
+  linke2017 synchronization of cyclins expression dynamics and compare simulation
+  behavior across conditions.
+models:
+- alias: linke2017_cyclin_expression
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000934.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: linke2017_cyclin_expression.sic1
+  to:
+  - visualisation.linke2017_cyclin_expression_sic1
+- from: linke2017_cyclin_expression.cdk1_clb5_or_clb6
+  to:
+  - visualisation.linke2017_cyclin_expression_cdk1_clb5_or_clb6
+- from: linke2017_cyclin_expression.cdk1_clb3_or_clb4
+  to:
+  - visualisation.linke2017_cyclin_expression_cdk1_clb3_or_clb4
+- from: linke2017_cyclin_expression.cdk1_clb1_or_clb2
+  to:
+  - visualisation.linke2017_cyclin_expression_cdk1_clb1_or_clb2
+- from: linke2017_cyclin_expression.state
+  to:
+  - visualisation.linke2017_cyclin_expression_state
+- from: linke2017_cyclin_expression.summary
+  to:
+  - visualisation.linke2017_cyclin_expression_summary
+- from: linke2017_cyclin_expression.species_labels
+  to:
+  - visualisation.linke2017_cyclin_expression_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: sic1
+    maps_to: linke2017_cyclin_expression.sic1
+  - name: cdk1_clb5_or_clb6
+    maps_to: linke2017_cyclin_expression.cdk1_clb5_or_clb6
+  - name: cdk1_clb3_or_clb4
+    maps_to: linke2017_cyclin_expression.cdk1_clb3_or_clb4
+  - name: cdk1_clb1_or_clb2
+    maps_to: linke2017_cyclin_expression.cdk1_clb1_or_clb2
+  - name: state
+    maps_to: linke2017_cyclin_expression.state
+  - name: summary
+    maps_to: linke2017_cyclin_expression.summary
+  - name: species_labels
+    maps_to: linke2017_cyclin_expression.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

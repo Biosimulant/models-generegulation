@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Yildirim2003_Lac_Operon Visualisation
+description: Dedicated presentation model for lac operon feedback.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Yildirim2003 Lac Operon Lab
+    question: Does lac feedback shift operon expression state?
+    answer_focus: lac operon induction feedback
+    caveat: External lactose is exposed because source species `L_e` is a boundary
+      species.
+    alias: yildirim2003_lac_operon
+    observables:
+    - id: M
+      port: lac_messenger_rna
+      label: mRNA
+    - id: B
+      port: beta_galactosidase
+      label: Betagalactosidase
+    - id: A
+      port: allolactose
+      label: allolactose
+    - id: P
+      port: permease
+      label: permease
+    state_observables:
+    - M
+    - B
+    - A
+    - L
+    - P
+    - I1
+    - I2
+    - I3
+    species_label_ids:
+    - M
+    - B
+    - A
+    - L
+    - P
+    - I1
+    - I2
+    - I3
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

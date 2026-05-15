@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Xie2007 Circadian Clock Lab
+description: circadian mRNA/protein clock. The model reproduces the oscillations for
+  mRNA and protein species as depicted in Fig 3 of the plot. The model differs slightly
+  from that given in the paper and this was made after a communication fro.
+models:
+- alias: xie2007_circadian_clock
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000160.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: xie2007_circadian_clock.period_protein
+  to:
+  - visualisation.xie2007_circadian_clock_period_protein
+- from: xie2007_circadian_clock.timeless_protein
+  to:
+  - visualisation.xie2007_circadian_clock_timeless_protein
+- from: xie2007_circadian_clock.clock_protein
+  to:
+  - visualisation.xie2007_circadian_clock_clock_protein
+- from: xie2007_circadian_clock.state
+  to:
+  - visualisation.xie2007_circadian_clock_state
+- from: xie2007_circadian_clock.summary
+  to:
+  - visualisation.xie2007_circadian_clock_summary
+- from: xie2007_circadian_clock.species_labels
+  to:
+  - visualisation.xie2007_circadian_clock_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: period_protein
+    maps_to: xie2007_circadian_clock.period_protein
+  - name: timeless_protein
+    maps_to: xie2007_circadian_clock.timeless_protein
+  - name: clock_protein
+    maps_to: xie2007_circadian_clock.clock_protein
+  - name: state
+    maps_to: xie2007_circadian_clock.state
+  - name: summary
+    maps_to: xie2007_circadian_clock.summary
+  - name: species_labels
+    maps_to: xie2007_circadian_clock.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

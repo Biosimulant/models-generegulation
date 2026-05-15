@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Ashall2009 - NFkappaB dependent transcription
+description: Model taken from Ashall et al., Science, 2009 (http://www.sciencemag.org/content/324/5924/242.long).
+  It can be used to explore generegulation ashall2009 nfkappab dependent transcription
+  model1509020000 dynamics and compare simulation behavior across conditions.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Louise Ashall
+- Caroline A Horton
+- David E Nelson
+- Pawel Paszek
+- Claire V Harper
+upstream:
+  id: biomodels_ebi:MODEL1509020000
+  source_db: biomodels_ebi
+  source_id: MODEL1509020000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1509020000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1509020000?filename=MODEL1509020000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.ashall2009_nfkappab_dependent_transcription_model1509020000_model:Ashall2009NfkappabDependentTranscriptionModel1509020000Model
+  init_kwargs:
+    model_path: data/MODEL1509020000.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: nuclear_nfkb
+    maps_to: species_14
+    label: nNF-kB
+    description: nNF-kB observable. Maps to SBML symbol `species_14`.
+  - name: nfkb
+    maps_to: species_3
+    label: NF-kB
+    description: NF-kB observable. Maps to SBML symbol `species_3`.
+  - name: ikba_transcript
+    maps_to: species_4
+    label: tIkBa
+    description: tIkBa observable. Maps to SBML symbol `species_4`.
+  - name: a20_transcript
+    maps_to: species_11
+    label: tA20
+    description: tA20 observable. Maps to SBML symbol `species_11`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

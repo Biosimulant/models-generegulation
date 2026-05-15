@@ -1,0 +1,70 @@
+schema_version: '2.0'
+title: Firczuk2013 - Eukaryotic mRNA translation machinery
+description: Firczuk2013 - Eukaryotic mRNA translation machinery This is a model of
+  Saccharomyces cerevisiae mRNA translation which includes the initiation, elongation
+  and termination phases. It can be used to explore generegulation firczuk2013 eukaryotic
+  mrna translation machiner dynamics and compare simulation behavior across conditions.
+standard: sbml
+tags:
+- generegulation
+- sbml
+- biomodels_ebi
+- faithful
+authors:
+- Biosimulant Team
+- Helena Firczuk
+- Shichina Kannambath
+- "J\xFCrgen Pahle"
+- Amy Claydon
+- Robert Beynon
+upstream:
+  id: biomodels_ebi:BIOMD0000000457
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000457
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000457
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000457?filename=BIOMD0000000457_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.firczuk2013_eukaryotic_mrna_translation_machiner_biomd0000000457_model:Firczuk2013EukaryoticMrnaTranslationMachinerBiomd0000000457Model
+  init_kwargs:
+    model_path: data/BIOMD0000000457.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+parameters:
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+io:
+  inputs: []
+  outputs:
+  - name: mrna_cap
+    maps_to: species_20
+    label: mRNA cap
+    description: mRNA cap observable. Maps to SBML symbol `species_20`.
+  - name: initiation_complex_43s
+    maps_to: species_16
+    label: 43S
+    description: 43S observable. Maps to SBML symbol `species_16`.
+  - name: eif2_gdp
+    maps_to: species_1
+    label: eIF2 GDP
+    description: eIF2 GDP observable. Maps to SBML symbol `species_1`.
+  - name: eif2b
+    maps_to: species_2
+    label: eIF2B
+    description: eIF2B observable. Maps to SBML symbol `species_2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from raw SBML observable symbols to display labels.

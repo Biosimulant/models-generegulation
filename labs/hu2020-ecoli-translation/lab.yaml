@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Hu2020 Ecoli Translation Lab
+description: E. coli translation model. This translation model consists of 274 biochemical
+  reactions, including 119 reactions with non-linear kinetics. This mechanistic model
+  accounts for the concentrations of mRNA, the ribosome, the differ.
+models:
+- alias: hu2020_ecoli_translation
+  path: models/core
+  parameters:
+    model_path: data/MODEL2006210001.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: hu2020_ecoli_translation.elongation_factor_tu
+  to:
+  - visualisation.hu2020_ecoli_translation_elongation_factor_tu
+- from: hu2020_ecoli_translation.elongation_factor_tu_gtp
+  to:
+  - visualisation.hu2020_ecoli_translation_elongation_factor_tu_gtp
+- from: hu2020_ecoli_translation.elongation_factor_ts
+  to:
+  - visualisation.hu2020_ecoli_translation_elongation_factor_ts
+- from: hu2020_ecoli_translation.alanine_trna_pool
+  to:
+  - visualisation.hu2020_ecoli_translation_alanine_trna_pool
+- from: hu2020_ecoli_translation.state
+  to:
+  - visualisation.hu2020_ecoli_translation_state
+- from: hu2020_ecoli_translation.summary
+  to:
+  - visualisation.hu2020_ecoli_translation_summary
+- from: hu2020_ecoli_translation.species_labels
+  to:
+  - visualisation.hu2020_ecoli_translation_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: elongation_factor_tu
+    maps_to: hu2020_ecoli_translation.elongation_factor_tu
+  - name: elongation_factor_tu_gtp
+    maps_to: hu2020_ecoli_translation.elongation_factor_tu_gtp
+  - name: elongation_factor_ts
+    maps_to: hu2020_ecoli_translation.elongation_factor_ts
+  - name: alanine_trna_pool
+    maps_to: hu2020_ecoli_translation.alanine_trna_pool
+  - name: state
+    maps_to: hu2020_ecoli_translation.state
+  - name: summary
+    maps_to: hu2020_ecoli_translation.summary
+  - name: species_labels
+    maps_to: hu2020_ecoli_translation.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

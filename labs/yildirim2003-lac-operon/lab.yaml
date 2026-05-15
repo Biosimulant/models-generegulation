@@ -1,0 +1,62 @@
+schema_version: '2.0'
+title: Yildirim2003 Lac Operon Lab
+description: 'lac operon feedback. This a model from the article: Feedback regulation
+  in the lactose operon: a mathematical modeling study and comparison with experimental
+  data. It can be used to explore generegulation yildirim2003 lac operon BioModels0000000065
+  dynamics and compare simulation behavior across conditions.'
+models:
+- alias: yildirim2003_lac_operon
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000065.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: yildirim2003_lac_operon.lac_messenger_rna
+  to:
+  - visualisation.yildirim2003_lac_operon_lac_messenger_rna
+- from: yildirim2003_lac_operon.beta_galactosidase
+  to:
+  - visualisation.yildirim2003_lac_operon_beta_galactosidase
+- from: yildirim2003_lac_operon.allolactose
+  to:
+  - visualisation.yildirim2003_lac_operon_allolactose
+- from: yildirim2003_lac_operon.permease
+  to:
+  - visualisation.yildirim2003_lac_operon_permease
+- from: yildirim2003_lac_operon.state
+  to:
+  - visualisation.yildirim2003_lac_operon_state
+- from: yildirim2003_lac_operon.summary
+  to:
+  - visualisation.yildirim2003_lac_operon_summary
+- from: yildirim2003_lac_operon.species_labels
+  to:
+  - visualisation.yildirim2003_lac_operon_species_labels
+io:
+  inputs:
+  - name: external_lactose
+    maps_to: yildirim2003_lac_operon.external_lactose
+    label: External lactose
+    description: Boundary species `L_e` (`External_Lactose`), the source extracellular
+      lactose level.
+  outputs:
+  - name: lac_messenger_rna
+    maps_to: yildirim2003_lac_operon.lac_messenger_rna
+  - name: beta_galactosidase
+    maps_to: yildirim2003_lac_operon.beta_galactosidase
+  - name: allolactose
+    maps_to: yildirim2003_lac_operon.allolactose
+  - name: permease
+    maps_to: yildirim2003_lac_operon.permease
+  - name: state
+    maps_to: yildirim2003_lac_operon.state
+  - name: summary
+    maps_to: yildirim2003_lac_operon.summary
+  - name: species_labels
+    maps_to: yildirim2003_lac_operon.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

@@ -1,0 +1,52 @@
+schema_version: '2.0'
+title: Zhu2007 Calcium Transcription Factor Lab
+description: 'calcium-modulated transcription factor activation. This a model from
+  the article: A theoretical study on activation of transcription factor modulated
+  by intracellular Ca2+ oscillations. It can be used to explore generegulation zhu2007
+  tf modulated by calcium dynamics and compare simulation behavior across conditions.'
+models:
+- alias: zhu2007_calcium_transcription_factor
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000166.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: zhu2007_calcium_transcription_factor.active_transcription_factor
+  to:
+  - visualisation.zhu2007_calcium_transcription_factor_active_transcription_factor
+- from: zhu2007_calcium_transcription_factor.stored_calcium
+  to:
+  - visualisation.zhu2007_calcium_transcription_factor_stored_calcium
+- from: zhu2007_calcium_transcription_factor.cytoplasmic_calcium
+  to:
+  - visualisation.zhu2007_calcium_transcription_factor_cytoplasmic_calcium
+- from: zhu2007_calcium_transcription_factor.state
+  to:
+  - visualisation.zhu2007_calcium_transcription_factor_state
+- from: zhu2007_calcium_transcription_factor.summary
+  to:
+  - visualisation.zhu2007_calcium_transcription_factor_summary
+- from: zhu2007_calcium_transcription_factor.species_labels
+  to:
+  - visualisation.zhu2007_calcium_transcription_factor_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: active_transcription_factor
+    maps_to: zhu2007_calcium_transcription_factor.active_transcription_factor
+  - name: stored_calcium
+    maps_to: zhu2007_calcium_transcription_factor.stored_calcium
+  - name: cytoplasmic_calcium
+    maps_to: zhu2007_calcium_transcription_factor.cytoplasmic_calcium
+  - name: state
+    maps_to: zhu2007_calcium_transcription_factor.state
+  - name: summary
+    maps_to: zhu2007_calcium_transcription_factor.summary
+  - name: species_labels
+    maps_to: zhu2007_calcium_transcription_factor.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

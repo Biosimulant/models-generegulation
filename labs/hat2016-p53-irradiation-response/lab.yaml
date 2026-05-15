@@ -1,0 +1,57 @@
+schema_version: '2.0'
+title: Hat2016 P53 Irradiation Response Lab
+description: p53 irradiation/cell-fate response. The p53 transcription factor is a
+  regulator of key cellular processes including DNA repair, cell cycle arrest, and
+  apoptosis. In this theoretical study, we investigate how the complex circuitry of
+  the.
+models:
+- alias: hat2016_p53_irradiation_response
+  path: models/core
+  parameters:
+    model_path: data/BIOMD0000000943.xml
+    integration_step: 0.1
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: hat2016_p53_irradiation_response.dna_double_strand_breaks
+  to:
+  - visualisation.hat2016_p53_irradiation_response_dna_double_strand_breaks
+- from: hat2016_p53_irradiation_response.p53_arrester
+  to:
+  - visualisation.hat2016_p53_irradiation_response_p53_arrester
+- from: hat2016_p53_irradiation_response.p53_killer
+  to:
+  - visualisation.hat2016_p53_irradiation_response_p53_killer
+- from: hat2016_p53_irradiation_response.mdm2_messenger_rna
+  to:
+  - visualisation.hat2016_p53_irradiation_response_mdm2_messenger_rna
+- from: hat2016_p53_irradiation_response.state
+  to:
+  - visualisation.hat2016_p53_irradiation_response_state
+- from: hat2016_p53_irradiation_response.summary
+  to:
+  - visualisation.hat2016_p53_irradiation_response_summary
+- from: hat2016_p53_irradiation_response.species_labels
+  to:
+  - visualisation.hat2016_p53_irradiation_response_species_labels
+io:
+  inputs: []
+  outputs:
+  - name: dna_double_strand_breaks
+    maps_to: hat2016_p53_irradiation_response.dna_double_strand_breaks
+  - name: p53_arrester
+    maps_to: hat2016_p53_irradiation_response.p53_arrester
+  - name: p53_killer
+    maps_to: hat2016_p53_irradiation_response.p53_killer
+  - name: mdm2_messenger_rna
+    maps_to: hat2016_p53_irradiation_response.mdm2_messenger_rna
+  - name: state
+    maps_to: hat2016_p53_irradiation_response.state
+  - name: summary
+    maps_to: hat2016_p53_irradiation_response.summary
+  - name: species_labels
+    maps_to: hat2016_p53_irradiation_response.species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

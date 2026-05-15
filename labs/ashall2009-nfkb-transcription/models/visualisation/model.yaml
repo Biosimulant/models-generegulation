@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Ashall2009 - NFkappaB dependent transcription Visualisation
+description: Dedicated presentation model for NF-kB dependent transcription.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Ashall2009 Nfkb Transcription Lab
+    question: Does NF-kB activity drive target transcription dynamics?
+    answer_focus: NF-kB nuclear/transcription response
+    caveat: Source symbols are preserved in maps_to for traceability.
+    alias: ashall2009_nfkb_transcription
+    observables:
+    - id: species_14
+      port: nuclear_nfkb
+      label: nNF-kB
+    - id: species_3
+      port: nfkb
+      label: NF-kB
+    - id: species_4
+      port: ikba_transcript
+      label: tIkBa
+    - id: species_11
+      port: a20_transcript
+      label: tA20
+    state_observables:
+    - species_1
+    - species_2
+    - species_3
+    - species_4
+    - species_5
+    - species_6
+    - species_7
+    - species_8
+    - species_9
+    - species_10
+    - species_11
+    - species_12
+    - species_13
+    - species_14
+    species_label_ids:
+    - species_1
+    - species_2
+    - species_3
+    - species_4
+    - species_5
+    - species_6
+    - species_7
+    - species_8
+    - species_9
+    - species_10
+    - species_11
+    - species_12
+    - species_13
+    - species_14
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

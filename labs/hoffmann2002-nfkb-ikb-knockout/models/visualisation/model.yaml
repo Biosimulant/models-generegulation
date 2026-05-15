@@ -1,0 +1,96 @@
+schema_version: '2.0'
+title: Hoffmann2002_KnockOut_IkBNFkB_Signaling Visualisation
+description: Dedicated presentation model for NF-kB/IkB knockout signaling.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Hoffmann2002 Nfkb Ikb Knockout Lab
+    question: How does the knockout wiring affect NF-kB activity?
+    answer_focus: knockout NF-kB signaling response
+    caveat: The knockout is predefined by the source model; genotype is not exposed
+      as a fake input.
+    alias: hoffmann2002_nfkb_ikb_knockout
+    observables:
+    - id: NFkB
+      port: nfkb
+      label: NF-kB
+    - id: IkBalpha
+      port: ikb_alpha
+      label: IkBalpha
+    - id: IKK
+      port: ikk
+      label: IKK
+    - id: IkBalpha_NFkB
+      port: ikb_alpha_nfkb_complex
+      label: IkBalpha NF-kB
+    state_observables:
+    - IkBalpha
+    - NFkB
+    - IkBalpha_NFkB
+    - IkBbeta
+    - IkBbeta_NFkB
+    - IkBeps
+    - IkBeps_NFkB
+    - IKK_IkBalpha
+    - IKK_IkBalpha_NFkB
+    - IKK
+    - IKK_IkBbeta
+    - IKK_IkBbeta_NFkB
+    - IKK_IkBeps
+    - IKK_IkBeps_NFkB
+    - NFkB_nuc
+    - IkBalpha_nuc
+    - IkBalpha_nuc_NFkB_nuc
+    - IkBbeta_nuc
+    - IkBbeta_nuc_NFkB_nuc
+    - IkBeps_nuc
+    - IkBalpha_transcript
+    - IkBbeta_transcript
+    - IkBeps_transcript
+    - IkBeps_nuc_NFkB_nuc
+    species_label_ids:
+    - IkBalpha
+    - NFkB
+    - IkBalpha_NFkB
+    - IkBbeta
+    - IkBbeta_NFkB
+    - IkBeps
+    - IkBeps_NFkB
+    - IKK_IkBalpha
+    - IKK_IkBalpha_NFkB
+    - IKK
+    - IKK_IkBbeta
+    - IKK_IkBbeta_NFkB
+    - IKK_IkBeps
+    - IKK_IkBeps_NFkB
+    - NFkB_nuc
+    - IkBalpha_nuc
+    - IkBalpha_nuc_NFkB_nuc
+    - IkBbeta_nuc
+    - IkBbeta_nuc_NFkB_nuc
+    - IkBeps_nuc
+    - IkBalpha_transcript
+    - IkBbeta_transcript
+    - IkBeps_transcript
+    - IkBeps_nuc_NFkB_nuc
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []

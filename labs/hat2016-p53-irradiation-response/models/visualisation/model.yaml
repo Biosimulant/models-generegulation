@@ -1,0 +1,115 @@
+schema_version: '2.0'
+title: Hat2016 - Reponse of p53 System to irradiation in cell fate decision making
+  Visualisation
+description: Dedicated presentation model for p53 irradiation/cell-fate response.
+standard: other
+tags:
+- generegulation
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.gene_regulation_visualisation:GeneRegulationVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Hat2016 P53 Irradiation Response Lab
+    question: Does irradiation produce a p53/DNA-damage response?
+    answer_focus: p53 and fate-decision dynamics
+    caveat: Irradiation is not exposed as a user input without a clear SBML stimulus
+      symbol.
+    alias: hat2016_p53_irradiation_response
+    observables:
+    - id: DNA_double_strand_break
+      port: dna_double_strand_breaks
+      label: DNA double strand break
+    - id: p53_arrester
+      port: p53_arrester
+      label: p53 arrester
+    - id: p53_killer
+      port: p53_killer
+      label: p53 killer
+    - id: Mdm2_mRNA
+      port: mdm2_messenger_rna
+      label: Mdm2 mRNA
+    state_observables:
+    - DNA_double_strand_break
+    - ATM_phosphorylated
+    - SIAH1_0
+    - HIPK2
+    - p53_0phosphorylated
+    - p53_arrester
+    - p53_S46phosphorylated
+    - Mdm2_nuc_S166S186phosphorylated
+    - Wip1
+    - p53_killer
+    - Mdm2_mRNA
+    - Mdm2_cyt_0phosphorylated
+    - Mdm2_cyt_S166S186phosphorylated
+    - AKT_phosphorylated
+    - Mdm2_nuc_S166S186p_S395p
+    - Wip1_mRNA
+    - PTEN_mRNA
+    - PTEN
+    - PIP3
+    - p21_mRNA
+    - p21__free
+    - Cyclin_E__free
+    - Cyclin_E_p21_complex
+    - Rb1_0__free
+    - Rb1_0_E2F1_complex
+    - Bax_mRNA
+    - Bax__free
+    - BclXL__free
+    - Bax_BclXL_complex
+    - Bad_0__free
+    - Bad_phosphorylated__free
+    - proCaspase
+    - Caspase
+    species_label_ids:
+    - DNA_double_strand_break
+    - ATM_phosphorylated
+    - SIAH1_0
+    - HIPK2
+    - p53_0phosphorylated
+    - p53_arrester
+    - p53_S46phosphorylated
+    - Mdm2_nuc_S166S186phosphorylated
+    - Wip1
+    - p53_killer
+    - Mdm2_mRNA
+    - Mdm2_cyt_0phosphorylated
+    - Mdm2_cyt_S166S186phosphorylated
+    - AKT_phosphorylated
+    - Mdm2_nuc_S166S186p_S395p
+    - Wip1_mRNA
+    - PTEN_mRNA
+    - PTEN
+    - PIP3
+    - p21_mRNA
+    - p21__free
+    - Cyclin_E__free
+    - Cyclin_E_p21_complex
+    - Rb1_0__free
+    - Rb1_0_E2F1_complex
+    - Bax_mRNA
+    - Bax__free
+    - BclXL__free
+    - Bax_BclXL_complex
+    - Bad_0__free
+    - Bad_phosphorylated__free
+    - proCaspase
+    - Caspase
+  communication_step: 1.0
+runtime:
+  dependencies:
+    packages:
+    - PyYAML==6.0.2
+parameters:
+- name: integration_step
+  value: 1.0
+  min: 0.0
+  units: model_time
+  description: Sampling step for the visualisation model.
+io:
+  inputs: []
+  outputs: []
