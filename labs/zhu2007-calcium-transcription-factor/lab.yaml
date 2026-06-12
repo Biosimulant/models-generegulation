@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zhu2007-calcium-transcription-factor
+version: 1.0.0
 title: Zhu2007 Calcium Transcription Factor Lab
 description: 'calcium-modulated transcription factor activation. This a model from
   the article: A theoretical study on activation of transcription factor modulated

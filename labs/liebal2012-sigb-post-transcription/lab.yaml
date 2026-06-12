@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: liebal2012-sigb-post-transcription
+version: 1.0.0
 title: Liebal2012 Sigb Post Transcription Lab
 description: B. subtilis sigma-B post-transcriptional instability. Liebal2012 - B.subtilis
   post-transcription instability model An important transcription factor of B.subsilis

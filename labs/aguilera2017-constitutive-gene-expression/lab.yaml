@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: aguilera2017-constitutive-gene-expression
+version: 1.0.0
 title: Aguilera2017 Constitutive Gene Expression Lab
 description: constitutive mRNA/protein expression. Model destription:The model describes
   the stochastic dynamics of two variables, protein and mRNA of a gene with constitutive

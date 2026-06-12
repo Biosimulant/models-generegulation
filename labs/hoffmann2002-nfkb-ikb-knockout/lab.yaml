@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: hoffmann2002-nfkb-ikb-knockout
+version: 1.0.0
 title: Hoffmann2002 Nfkb Ikb Knockout Lab
 description: NF-kB/IkB knockout signaling. The model corresponds to the knock out
   model of beta-/-, epsilon -/- and reproduces the upper panel in Fig 2C. In order

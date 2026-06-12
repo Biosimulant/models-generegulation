@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: grunwald2008-duchenne-gene-regulation
+version: 1.0.0
 title: Grunwald2008 Duchenne Gene Regulation Lab
 description: Duchenne muscular dystrophy gene-regulatory network. Gene Regulation
   Grunwald2008Gene Regulation Of The Duchenne Mus Model1403120000Model models core

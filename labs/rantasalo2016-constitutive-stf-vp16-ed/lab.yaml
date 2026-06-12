@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: rantasalo2016-constitutive-stf-vp16-ed
+version: 1.0.0
 title: Rantasalo2016 Constitutive Stf Vp16 Ed Lab
 description: constitutive synthetic expression modulator promoter variant. Rantasalo2015-Synthetic_expresion_modulator_constitutiveSTF_VP16_pBID2-EDcorePromoterThis
   model is part of a family of models describing a modular synthetic expression system

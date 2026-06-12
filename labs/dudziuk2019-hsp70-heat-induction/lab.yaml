@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: dudziuk2019-hsp70-heat-induction
+version: 1.0.0
 title: Dudziuk2019 Hsp70 Heat Induction Lab
 description: Hsp70 heat-shock induction. This is a mathematical model of Hsp70 induction.
   To model heat shock effects, the model incorporates temperature dependencies in

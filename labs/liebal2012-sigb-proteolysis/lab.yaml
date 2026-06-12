@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: liebal2012-sigb-proteolysis
+version: 1.0.0
 title: Liebal2012 Sigb Proteolysis Lab
 description: B. subtilis sigma-B proteolysis. Liebal2012 - B.subtilis sigB proteolysis
   model An important transcription factor of B.subsilis is sigma B . It can be used

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: rantasalo2016-constitutive-stf-b42
+version: 1.0.0
 title: Rantasalo2016 Constitutive Stf B42 Lab
 description: constitutive synthetic expression modulator. Rantasalo2015-Synthetic_expresion_modulator_constitutiveSTF_B42This
   model is part of a family of models describing a modular synthetic expression system

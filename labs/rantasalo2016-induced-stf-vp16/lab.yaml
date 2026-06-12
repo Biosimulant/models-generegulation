@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: rantasalo2016-induced-stf-vp16
+version: 1.0.0
 title: Rantasalo2016 Induced Stf Vp16 Lab
 description: induced synthetic expression modulator. Rantasalo2015-Synthetic_expresion_modulator_inducedSTF_VP16This
   model is part of a family of models describing a modular synthetic expression system

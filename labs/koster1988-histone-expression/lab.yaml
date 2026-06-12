@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: koster1988-histone-expression
+version: 1.0.0
 title: Koster1988 Histone Expression Lab
 description: 'Xenopus histone expression kinetics. This model is described in the
   article: Kinetics of histone gene expression during early development of Xenopus

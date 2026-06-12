@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: hat2016-p53-irradiation-response
+version: 1.0.0
 title: Hat2016 P53 Irradiation Response Lab
 description: p53 irradiation/cell-fate response. The p53 transcription factor is a
   regulator of key cellular processes including DNA repair, cell cycle arrest, and

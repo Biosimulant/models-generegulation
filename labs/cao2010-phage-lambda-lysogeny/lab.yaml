@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: cao2010-phage-lambda-lysogeny
+version: 1.0.0
 title: Cao2010 Phage Lambda Lysogeny Lab
 description: phage lambda lysogeny switch. References:1. It can be used to explore
   generegulation cao2010 epigenetic state of lysogeny dynamics and compare simulation
