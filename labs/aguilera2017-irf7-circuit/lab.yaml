@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: aguilera2017-irf7-circuit
-version: 1.0.0
+version: 1.0.1
 title: Aguilera2017 Irf7 Circuit Lab
 description: murine IRF7/IFN gene circuit. Model destription:The model describes the
   dynamics of murine IRF7 gene expression upon IFN stimulation. The present model

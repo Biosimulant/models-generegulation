@@ -1,178 +1,178 @@
-schema_version: "1"
+schema_version: '1'
 namespace: demi
 default_visibility: public
 packages:
-  - id: aguilera2017-constitutive-gene-expression-lab
-    package: aguilera2017-constitutive-gene-expression
-    version: 1.0.0
-    type: lab
-    path: labs/aguilera2017-constitutive-gene-expression
-    visibility: public
-  - id: aguilera2017-irf7-circuit-lab
-    package: aguilera2017-irf7-circuit
-    version: 1.0.0
-    type: lab
-    path: labs/aguilera2017-irf7-circuit
-    visibility: public
-  - id: ashall2009-nfkb-transcription-lab
-    package: ashall2009-nfkb-transcription
-    version: 1.0.0
-    type: lab
-    path: labs/ashall2009-nfkb-transcription
-    visibility: public
-  - id: cao2010-phage-lambda-lysogeny-lab
-    package: cao2010-phage-lambda-lysogeny
-    version: 1.0.0
-    type: lab
-    path: labs/cao2010-phage-lambda-lysogeny
-    visibility: public
-  - id: dudziuk2019-hsp70-heat-induction-lab
-    package: dudziuk2019-hsp70-heat-induction
-    version: 1.0.0
-    type: lab
-    path: labs/dudziuk2019-hsp70-heat-induction
-    visibility: public
-  - id: firczuk2013-eukaryotic-translation-lab
-    package: firczuk2013-eukaryotic-translation
-    version: 1.0.0
-    type: lab
-    path: labs/firczuk2013-eukaryotic-translation
-    visibility: public
-  - id: grunwald2008-duchenne-gene-regulation-lab
-    package: grunwald2008-duchenne-gene-regulation
-    version: 1.0.0
-    type: lab
-    path: labs/grunwald2008-duchenne-gene-regulation
-    visibility: public
-  - id: hat2016-p53-irradiation-response-lab
-    package: hat2016-p53-irradiation-response
-    version: 1.0.0
-    type: lab
-    path: labs/hat2016-p53-irradiation-response
-    visibility: public
-  - id: hoffmann2002-nfkb-ikb-knockout-lab
-    package: hoffmann2002-nfkb-ikb-knockout
-    version: 1.0.0
-    type: lab
-    path: labs/hoffmann2002-nfkb-ikb-knockout
-    visibility: public
-  - id: hu2020-ecoli-translation-lab
-    package: hu2020-ecoli-translation
-    version: 1.0.0
-    type: lab
-    path: labs/hu2020-ecoli-translation
-    visibility: public
-  - id: konrath2020-p53-signaling-lab
-    package: konrath2020-p53-signaling
-    version: 1.0.0
-    type: lab
-    path: labs/konrath2020-p53-signaling
-    visibility: public
-  - id: koo2013-shear-enos-expression-lab
-    package: koo2013-shear-enos-expression
-    version: 1.0.0
-    type: lab
-    path: labs/koo2013-shear-enos-expression
-    visibility: public
-  - id: koster1988-histone-expression-lab
-    package: koster1988-histone-expression
-    version: 1.0.0
-    type: lab
-    path: labs/koster1988-histone-expression
-    visibility: public
-  - id: liebal2012-sigb-post-transcription-lab
-    package: liebal2012-sigb-post-transcription
-    version: 1.0.0
-    type: lab
-    path: labs/liebal2012-sigb-post-transcription
-    visibility: public
-  - id: liebal2012-sigb-proteolysis-lab
-    package: liebal2012-sigb-proteolysis
-    version: 1.0.0
-    type: lab
-    path: labs/liebal2012-sigb-proteolysis
-    visibility: public
-  - id: liebal2012-sigb-transcription-inhibition-lab
-    package: liebal2012-sigb-transcription-inhibition
-    version: 1.0.0
-    type: lab
-    path: labs/liebal2012-sigb-transcription-inhibition
-    visibility: public
-  - id: linke2017-cyclin-expression-lab
-    package: linke2017-cyclin-expression
-    version: 1.0.0
-    type: lab
-    path: labs/linke2017-cyclin-expression
-    visibility: public
-  - id: rantasalo2016-constitutive-stf-b42-lab
-    package: rantasalo2016-constitutive-stf-b42
-    version: 1.0.0
-    type: lab
-    path: labs/rantasalo2016-constitutive-stf-b42
-    visibility: public
-  - id: rantasalo2016-constitutive-stf-vp16-lab
-    package: rantasalo2016-constitutive-stf-vp16
-    version: 1.0.0
-    type: lab
-    path: labs/rantasalo2016-constitutive-stf-vp16
-    visibility: public
-  - id: rantasalo2016-constitutive-stf-vp16-ed-lab
-    package: rantasalo2016-constitutive-stf-vp16-ed
-    version: 1.0.0
-    type: lab
-    path: labs/rantasalo2016-constitutive-stf-vp16-ed
-    visibility: public
-  - id: rantasalo2016-induced-stf-b42-lab
-    package: rantasalo2016-induced-stf-b42
-    version: 1.0.0
-    type: lab
-    path: labs/rantasalo2016-induced-stf-b42
-    visibility: public
-  - id: rantasalo2016-induced-stf-vp16-lab
-    package: rantasalo2016-induced-stf-vp16
-    version: 1.0.0
-    type: lab
-    path: labs/rantasalo2016-induced-stf-vp16
-    visibility: public
-  - id: shenorr2002-feedforward-and-gate-lab
-    package: shenorr2002-feedforward-and-gate
-    version: 1.0.0
-    type: lab
-    path: labs/shenorr2002-feedforward-and-gate
-    visibility: public
-  - id: shimoni2009-ecoli-sos-response-lab
-    package: shimoni2009-ecoli-sos-response
-    version: 1.0.0
-    type: lab
-    path: labs/shimoni2009-ecoli-sos-response
-    visibility: public
-  - id: xie2007-circadian-clock-lab
-    package: xie2007-circadian-clock
-    version: 1.0.0
-    type: lab
-    path: labs/xie2007-circadian-clock
-    visibility: public
-  - id: yildirim2003-lac-operon-lab
-    package: yildirim2003-lac-operon
-    version: 1.0.0
-    type: lab
-    path: labs/yildirim2003-lac-operon
-    visibility: public
-  - id: you2010-yeast-translation-lab
-    package: you2010-yeast-translation
-    version: 1.0.0
-    type: lab
-    path: labs/you2010-yeast-translation
-    visibility: public
-  - id: zeilinger2006-prr7-prr9-light-clock-lab
-    package: zeilinger2006-prr7-prr9-light-clock
-    version: 1.0.0
-    type: lab
-    path: labs/zeilinger2006-prr7-prr9-light-clock
-    visibility: public
-  - id: zhu2007-calcium-transcription-factor-lab
-    package: zhu2007-calcium-transcription-factor
-    version: 1.0.0
-    type: lab
-    path: labs/zhu2007-calcium-transcription-factor
-    visibility: public
+- id: aguilera2017-constitutive-gene-expression-lab
+  package: aguilera2017-constitutive-gene-expression
+  version: 1.0.1
+  type: lab
+  path: labs/aguilera2017-constitutive-gene-expression
+  visibility: public
+- id: aguilera2017-irf7-circuit-lab
+  package: aguilera2017-irf7-circuit
+  version: 1.0.1
+  type: lab
+  path: labs/aguilera2017-irf7-circuit
+  visibility: public
+- id: ashall2009-nfkb-transcription-lab
+  package: ashall2009-nfkb-transcription
+  version: 1.0.1
+  type: lab
+  path: labs/ashall2009-nfkb-transcription
+  visibility: public
+- id: cao2010-phage-lambda-lysogeny-lab
+  package: cao2010-phage-lambda-lysogeny
+  version: 1.0.1
+  type: lab
+  path: labs/cao2010-phage-lambda-lysogeny
+  visibility: public
+- id: dudziuk2019-hsp70-heat-induction-lab
+  package: dudziuk2019-hsp70-heat-induction
+  version: 1.0.1
+  type: lab
+  path: labs/dudziuk2019-hsp70-heat-induction
+  visibility: public
+- id: firczuk2013-eukaryotic-translation-lab
+  package: firczuk2013-eukaryotic-translation
+  version: 1.0.1
+  type: lab
+  path: labs/firczuk2013-eukaryotic-translation
+  visibility: public
+- id: grunwald2008-duchenne-gene-regulation-lab
+  package: grunwald2008-duchenne-gene-regulation
+  version: 1.0.1
+  type: lab
+  path: labs/grunwald2008-duchenne-gene-regulation
+  visibility: public
+- id: hat2016-p53-irradiation-response-lab
+  package: hat2016-p53-irradiation-response
+  version: 1.0.1
+  type: lab
+  path: labs/hat2016-p53-irradiation-response
+  visibility: public
+- id: hoffmann2002-nfkb-ikb-knockout-lab
+  package: hoffmann2002-nfkb-ikb-knockout
+  version: 1.0.1
+  type: lab
+  path: labs/hoffmann2002-nfkb-ikb-knockout
+  visibility: public
+- id: hu2020-ecoli-translation-lab
+  package: hu2020-ecoli-translation
+  version: 1.0.1
+  type: lab
+  path: labs/hu2020-ecoli-translation
+  visibility: public
+- id: konrath2020-p53-signaling-lab
+  package: konrath2020-p53-signaling
+  version: 1.0.1
+  type: lab
+  path: labs/konrath2020-p53-signaling
+  visibility: public
+- id: koo2013-shear-enos-expression-lab
+  package: koo2013-shear-enos-expression
+  version: 1.0.1
+  type: lab
+  path: labs/koo2013-shear-enos-expression
+  visibility: public
+- id: koster1988-histone-expression-lab
+  package: koster1988-histone-expression
+  version: 1.0.1
+  type: lab
+  path: labs/koster1988-histone-expression
+  visibility: public
+- id: liebal2012-sigb-post-transcription-lab
+  package: liebal2012-sigb-post-transcription
+  version: 1.0.1
+  type: lab
+  path: labs/liebal2012-sigb-post-transcription
+  visibility: public
+- id: liebal2012-sigb-proteolysis-lab
+  package: liebal2012-sigb-proteolysis
+  version: 1.0.1
+  type: lab
+  path: labs/liebal2012-sigb-proteolysis
+  visibility: public
+- id: liebal2012-sigb-transcription-inhibition-lab
+  package: liebal2012-sigb-transcription-inhibition
+  version: 1.0.1
+  type: lab
+  path: labs/liebal2012-sigb-transcription-inhibition
+  visibility: public
+- id: linke2017-cyclin-expression-lab
+  package: linke2017-cyclin-expression
+  version: 1.0.1
+  type: lab
+  path: labs/linke2017-cyclin-expression
+  visibility: public
+- id: rantasalo2016-constitutive-stf-b42-lab
+  package: rantasalo2016-constitutive-stf-b42
+  version: 1.0.1
+  type: lab
+  path: labs/rantasalo2016-constitutive-stf-b42
+  visibility: public
+- id: rantasalo2016-constitutive-stf-vp16-lab
+  package: rantasalo2016-constitutive-stf-vp16
+  version: 1.0.1
+  type: lab
+  path: labs/rantasalo2016-constitutive-stf-vp16
+  visibility: public
+- id: rantasalo2016-constitutive-stf-vp16-ed-lab
+  package: rantasalo2016-constitutive-stf-vp16-ed
+  version: 1.0.1
+  type: lab
+  path: labs/rantasalo2016-constitutive-stf-vp16-ed
+  visibility: public
+- id: rantasalo2016-induced-stf-b42-lab
+  package: rantasalo2016-induced-stf-b42
+  version: 1.0.1
+  type: lab
+  path: labs/rantasalo2016-induced-stf-b42
+  visibility: public
+- id: rantasalo2016-induced-stf-vp16-lab
+  package: rantasalo2016-induced-stf-vp16
+  version: 1.0.1
+  type: lab
+  path: labs/rantasalo2016-induced-stf-vp16
+  visibility: public
+- id: shenorr2002-feedforward-and-gate-lab
+  package: shenorr2002-feedforward-and-gate
+  version: 1.0.1
+  type: lab
+  path: labs/shenorr2002-feedforward-and-gate
+  visibility: public
+- id: shimoni2009-ecoli-sos-response-lab
+  package: shimoni2009-ecoli-sos-response
+  version: 1.0.1
+  type: lab
+  path: labs/shimoni2009-ecoli-sos-response
+  visibility: public
+- id: xie2007-circadian-clock-lab
+  package: xie2007-circadian-clock
+  version: 1.0.1
+  type: lab
+  path: labs/xie2007-circadian-clock
+  visibility: public
+- id: yildirim2003-lac-operon-lab
+  package: yildirim2003-lac-operon
+  version: 1.0.1
+  type: lab
+  path: labs/yildirim2003-lac-operon
+  visibility: public
+- id: you2010-yeast-translation-lab
+  package: you2010-yeast-translation
+  version: 1.0.1
+  type: lab
+  path: labs/you2010-yeast-translation
+  visibility: public
+- id: zeilinger2006-prr7-prr9-light-clock-lab
+  package: zeilinger2006-prr7-prr9-light-clock
+  version: 1.0.1
+  type: lab
+  path: labs/zeilinger2006-prr7-prr9-light-clock
+  visibility: public
+- id: zhu2007-calcium-transcription-factor-lab
+  package: zhu2007-calcium-transcription-factor
+  version: 1.0.1
+  type: lab
+  path: labs/zhu2007-calcium-transcription-factor
+  visibility: public

@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: firczuk2013-eukaryotic-translation
-version: 1.0.0
+version: 1.0.1
 title: Firczuk2013 Eukaryotic Translation Lab
 description: yeast mRNA translation machinery. Firczuk2013 - Eukaryotic mRNA translation
   machinery This is a model of Saccharomyces cerevisiae mRNA translation which includes

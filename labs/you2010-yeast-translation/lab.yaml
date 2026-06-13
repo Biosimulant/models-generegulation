@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: you2010-yeast-translation
-version: 1.0.0
+version: 1.0.1
 title: You2010 Yeast Translation Lab
 description: 'yeast mRNA translation. This the model from the article: A quantitative
   model for mRNA translation in Saccharomyces cerevisiae. It can be used to explore

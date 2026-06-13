@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: shenorr2002-feedforward-and-gate
-version: 1.0.0
+version: 1.0.1
 title: Shenorr2002 Feedforward And Gate Lab
 description: 'coherent feed-forward loop. This is the coherent feed forward loop with
   an AND-gate like control of the response operon described in the article: Network

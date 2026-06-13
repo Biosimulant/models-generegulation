@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: shimoni2009-ecoli-sos-response
-version: 1.0.0
+version: 1.0.1
 title: Shimoni2009 Ecoli Sos Response Lab
 description: E. coli SOS DNA-damage circuit. Shimoni2009 - Escherichia Coli SOS Simple
   model, involving only the basic components of the circuit, sufficient to explain

@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: xie2007-circadian-clock
-version: 1.0.0
+version: 1.0.1
 title: Xie2007 Circadian Clock Lab
 description: circadian mRNA/protein clock. The model reproduces the oscillations for
   mRNA and protein species as depicted in Fig 3 of the plot. The model differs slightly

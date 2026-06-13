@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: yildirim2003-lac-operon
-version: 1.0.0
+version: 1.0.1
 title: Yildirim2003 Lac Operon Lab
 description: 'lac operon feedback. This a model from the article: Feedback regulation
   in the lactose operon: a mathematical modeling study and comparison with experimental

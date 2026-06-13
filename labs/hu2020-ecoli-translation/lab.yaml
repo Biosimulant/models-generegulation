@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: hu2020-ecoli-translation
-version: 1.0.0
+version: 1.0.1
 title: Hu2020 Ecoli Translation Lab
 description: E. coli translation model. This translation model consists of 274 biochemical
   reactions, including 119 reactions with non-linear kinetics. This mechanistic model

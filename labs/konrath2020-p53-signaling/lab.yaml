@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: konrath2020-p53-signaling
-version: 1.0.0
+version: 1.0.1
 title: Konrath2020 P53 Signaling Lab
 description: p53 subpopulation signaling. The ODE model is based on Batchelor et al.,
   Mol. It can be used to explore generegulation konrath2020 p53 signaling model2004300002

@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: linke2017-cyclin-expression
-version: 1.0.0
+version: 1.0.1
 title: Linke2017 Cyclin Expression Lab
 description: yeast cyclin B2/B3 expression. Modeling of the expression of cyclin B2
   and B3 in the budding yeast cell cycle. It can be used to explore generegulation

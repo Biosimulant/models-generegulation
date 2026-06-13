@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: rantasalo2016-constitutive-stf-vp16
-version: 1.0.0
+version: 1.0.1
 title: Rantasalo2016 Constitutive Stf Vp16 Lab
 description: constitutive synthetic expression modulator. Rantasalo2015-Synthetic_expresion_modulator_constitutiveSTF_VP16This
   model is part of a family of models describing a modular synthetic expression system

@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: zeilinger2006-prr7-prr9-light-clock
-version: 1.0.0
+version: 1.0.1
 title: Zeilinger2006 Prr7 Prr9 Light Clock Lab
 description: plant light/circadian clock. The model reproduces the time profile of
   TOC1 and Y mRNA for a 8:16 cycle as depicted in Fig7A and 7B. A simple algorithm
